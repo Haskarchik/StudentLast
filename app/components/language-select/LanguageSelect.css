@@ -1,0 +1,325 @@
+@charset "UTF-8";
+/*
+ @font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-Heavy.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-BoldItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-HeavyItalic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} */
+/*// Указываем box sizing*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*// Убираем внутренние отступы*/
+ul[class],
+ol[class] {
+  margin: 0;
+  padding: 0;
+}
+
+/*// Убираем внешние отступы*/
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+.root {
+  padding: 0 2rem;
+}
+@media (min-width: 992px) {
+  .root {
+    padding: 0 4rem;
+  }
+}
+
+:root {
+  --font-sans: "Open Sans", sans-serif;
+  --font-jost: "Jost", sans-serif;
+  --white: #f3f3f3;
+  --black: #181818;
+  --grey: #262626;
+  --dull-grey: #494949;
+  --purple: linear-gradient(321.6deg, #9795f0 3.29%, #fbc8d4 101.27%);
+  --light-grey: #e7e7e7;
+  --violet: #6b69e7;
+  --yellow: #ffb930;
+  --red: #f43e49;
+}
+
+/*//Выставляем основные настройки по-умолчанию для body*/
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-image: url("./assets/background.svg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  font-family: var(--font-sans);
+  background: linear-gradient(to bottom, #A7BED7, #A697E0, #9372E9, #6B69E7);
+  scrollbar-color: #800080 #ffffff; /* Фіолетовий колір ползунку і фону */
+}
+
+body::-webkit-scrollbar {
+  width: 0; /* Фіолетовий колір ползунку */
+  visibility: 0;
+}
+
+html {
+  scroll-behavior: auto;
+  scrollbar-color: #800080 #ffffff; /* Фіолетовий колір ползунку і фону */
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #800080; /* Фіолетовий колір ползунку */
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes scroll-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.scroll-up {
+  animation: scroll-up 0.5s ease-in-out;
+}
+
+.scroll-down {
+  animation: scroll-down 0.5s ease-in-out;
+}
+
+/* .App { */
+/* margin-left: 12px; */
+/* } */
+#overlay-root {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.span-article {
+  font-size: 42px;
+  line-height: 42px;
+  font-family: "CASlalomExtended", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  .span-article {
+    font-size: 64px;
+    line-height: 88px;
+  }
+}
+
+@media (max-width: 350px) {
+  .span-article {
+    font-size: 36px;
+  }
+}
+.span-sub-article {
+  font-size: 32px;
+  font-family: "CASlalomExtended", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media (min-width: 425px) {
+  .max-425px {
+    display: none;
+  }
+}
+.MuiAutocomplete-popper {
+  background-color: #6B69E7;
+}
+
+.language-select {
+  display: flex;
+  flex-direction: row;
+  margin: 0 3rem;
+  margin-bottom: 12px;
+}
+.language-select a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  color: gray;
+  align-items: center;
+  line-height: 1.5;
+  height: 40px;
+  width: 60px;
+  justify-content: space-between;
+  font-weight: 500;
+}
+.language-select a span {
+  padding-right: 7px;
+}
+.language-select .active {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  color: black;
+  align-items: center;
+  line-height: 1.5;
+  height: 40px;
+  width: 60px;
+  justify-content: space-between;
+}
+.language-select .active:hover {
+  background-color: rgba(111, 109, 236, 0.4745098039);
+  color: var(--white);
+  border: none;
+  border-radius: 5.62rem;
+  cursor: pointer;
+}
+@media (min-width: 576px) {
+  .language-select {
+    margin-bottom: 0px;
+  }
+}
+.language-select .language-divider {
+  margin: 0 3.5px;
+}
+.language-select .vertical-divider {
+  width: 2px;
+  color: white;
+  border: none;
+  border-left: 1px solid hsl(200, 10%, 50%);
+}
+.language-select .language-item {
+  padding: 0.25rem !important;
+  min-width: auto;
+  border-radius: 5.62rem;
+  font-family: "Vollkorn";
+  font-weight: 500;
+}
+.language-select .language-item .language-item-lang {
+  display: block;
+  margin-top: 1px;
+}
+@media (min-width: 992px) {
+  .language-select .language-item .language-item-lang {
+    margin-top: 5px;
+  }
+}
+.language-select .language-item:hover {
+  background-color: rgba(111, 109, 236, 0.4745098039);
+  color: var(--white);
+  border: none;
+  border-radius: 5.62rem;
+  cursor: pointer;
+}
+.language-select .flag-icon {
+  margin-left: 4px;
+  width: 1.5rem;
+  height: 1.5rem;
+  image-resolution: 1/1;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}

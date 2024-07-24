@@ -1,0 +1,369 @@
+@import "../../App";
+
+@keyframes left {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    left: -125px;
+  }
+  100% {
+    opacity: 1;
+    left: 0px;
+  }
+}
+
+@keyframes right {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+
+    right: -125px;
+  }
+
+  100% {
+    opacity: 1;
+    right: 0px;
+  }
+}
+.work-process-wrapper {
+  margin-top: 50px;
+}
+
+.work-process {
+  display: flex;
+  justify-content: flex-end;
+  transition-duration: 0.3s;
+
+  &-container {
+    position: relative;
+    margin: 50px;
+
+    @include lg {
+      width: 500px;
+    }
+
+    svg {
+      margin: 0 auto;
+      display: block;
+    }
+
+    img {
+      width: 90%;
+
+      @include lg {
+        width: auto;
+      }
+    }
+
+    span {
+      max-width: 172px;
+      position: absolute;
+
+      &:nth-child(1) {
+        top: 25px;
+      }
+
+      &:nth-child(2) {
+        top: 95px;
+      }
+
+      &:nth-child(3) {
+        top: 180px;
+        padding-right: 7px;
+      }
+
+      &:nth-child(4) {
+        top: 260px;
+        text-align: right;
+      }
+
+      &:nth-child(odd) {
+        left: 15px;
+      }
+
+      &:nth-child(even) {
+        right: -10px;
+      }
+    }
+  }
+}
+.work-process-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+
+  .span-title {
+    @include lg {
+      max-width: 500px;
+    }
+  }
+
+  .work-process-container {
+    position: relative;
+    margin: 1rem 0 0 0 !important;
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    @include lg {
+      width: 50%;
+    }
+
+    .work-process-left-part {
+      margin-top: 2rem;
+      position: relative;
+      padding-right: 0px;
+      @include sm {
+        padding-right: 100px;
+      }
+
+      &::after {
+        content: "";
+        background-image: url(../../assets/dashed-line.png);
+        width: 2px;
+        height: 330px;
+        position: absolute;
+        top: 0;
+        left: 135px;
+        @include sm {
+          left: 300px;
+        }
+      }
+    }
+
+    .work-process-right-part {
+      height: 330px;
+      margin-left: 86px;
+    }
+    .work-process-step {
+      transition-duration: 0.5s;
+      @include sm {
+        font-size: 20px;
+      }
+      text-align: left;
+      color: #181818;
+      font-size: 13px;
+      font-family: Open Sans;
+      font-weight: 400;
+      line-height: 24px;
+      word-wrap: break-word;
+      position: relative;
+      width: 90px;
+      @include sm {
+        width: 230px;
+      }
+      &::after {
+        content: "";
+        width: 40px;
+        @include sm {
+          width: 76px;
+        }
+        height: 1px;
+        background-color: black;
+        position: absolute;
+        top: 50%;
+      }
+      &::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: black;
+        position: absolute;
+        z-index: 2;
+        top: 40%;
+        left: 295px;
+      }
+    }
+    .first-step {
+      margin-top: 25px;
+      left: 0px;
+      @include lg {
+        animation-name: left;
+        animation-duration: 0.5s;
+        animation-fill-mode: backwards;
+        animation-play-state: paused;
+      }
+
+      &::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: black;
+        position: absolute;
+        top: 26%;
+        left: 130px;
+
+        @include sm {
+          left: 295px;
+        }
+      }
+      &::after {
+        top: 18px;
+        left: 95px;
+        @include sm {
+          left: 225px;
+          top: 50%;
+        }
+      }
+    }
+    .second-step {
+      margin-top: 90px;
+      left: 0px;
+      @include lg {
+        animation-play-state: paused;
+        animation-name: left;
+        animation-duration: 1s;
+        animation-fill-mode: backwards;
+      }
+
+      @include sm {
+        margin-top: 130px;
+      }
+
+      &::before {
+        left: 130px;
+
+        @include sm {
+          left: 295px;
+        }
+      }
+      &::after {
+        left: 95px;
+        @include sm {
+          left: 225px;
+        }
+      }
+    }
+    .third-step {
+      width: 100px;
+      right: 0px;
+      margin-top: 100px;
+      @include lg {
+        animation: right 0.7s linear 1;
+        animation-fill-mode: backwards;
+        animation-play-state: paused;
+      }
+
+      @include sm {
+        margin-top: 100px;
+        width: 200px;
+      }
+
+      &::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: black;
+        position: absolute;
+        top: 45%;
+        left: 220px;
+        @include sm {
+          top: 40%;
+        }
+      }
+      &::after {
+        top: 50%;
+        left: -46px;
+        @include sm {
+          left: -115px;
+        }
+      }
+      &::before {
+        left: -46px;
+        @include sm {
+          left: -121px;
+        }
+      }
+    }
+
+    .four-step {
+      text-align: end;
+      margin-top: 70px;
+      width: 80px;
+      right: 0px;
+      @include lg {
+        animation: right 1.2s linear 1;
+        animation-fill-mode: backwards;
+        animation-play-state: paused;
+      }
+
+      @include sm {
+        width: 200px;
+        margin-top: 110px;
+      }
+      &::after {
+        left: -46px;
+        top: 50%;
+        @include sm {
+          left: -115px;
+        }
+      }
+      &::before {
+        top: 18px;
+        left: -46px;
+        @include sm {
+          left: -121px;
+          top: 38%;
+        }
+      }
+    }
+    img {
+      margin: 0 auto;
+      margin-top: 2rem;
+      display: block;
+    }
+
+    span {
+      max-width: 10.75rem;
+      position: absolute;
+
+      &:nth-child(1) {
+        top: 1.56rem;
+      }
+
+      &:nth-child(2) {
+        top: 5.93rem;
+      }
+
+      &:nth-child(3) {
+        top: 11.25rem;
+        padding-right: 0.43rem;
+      }
+
+      &:nth-child(4) {
+        top: 16.25rem;
+        text-align: right;
+      }
+
+      &:nth-child(odd) {
+        left: 0.93rem;
+      }
+
+      &:nth-child(even) {
+        right: -0.62rem;
+      }
+    }
+  }
+
+  &:hover {
+    .first-step {
+      animation-play-state: running;
+    }
+    .second-step {
+      animation-play-state: running;
+    }
+    .third-step {
+      animation-play-state: running;
+    }
+    .four-step {
+      animation-play-state: running;
+    }
+  }
+}

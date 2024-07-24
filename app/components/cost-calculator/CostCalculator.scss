@@ -1,0 +1,152 @@
+@import '../../App.scss';
+.wrapper-costCalc {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  justify-content: center;
+  width: 100%;
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  
+  textarea{
+    &:focus{
+      font-weight: 400;
+    }}
+  
+  input{    
+    font-weight: 200;
+    font-family: 'Oswald';
+  &:focus{
+    font-weight: 400;
+  }}
+    
+  @include lg {
+    justify-content: initial;
+    width: 45%;
+  }
+
+  .MuiDialogContent-root {
+    background-color: var(--violet) !important;
+  }
+
+  .work-article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    @include lg {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .date-pages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+
+    @include lg {
+      flex-wrap: nowrap;
+    }
+  }
+
+  .email-phone {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2.1rem;
+  }
+
+  .subject {
+    margin-bottom: 2rem;
+  }
+
+  .additional-requirements {
+    margin-top: 1rem;
+
+    *::placeholder {
+      opacity: 0.8;;
+      color: black;
+      text-align: justify;
+      white-space: pre-line;
+
+      @include lg {
+        text-align: left;
+      }
+    }
+  }
+
+  .order-button {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 2rem;
+  }
+}
+
+.date__container {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.additional {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  column-gap: 2rem;
+}
+@media screen and (min-width: 920px) {
+  .additional {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 2rem;
+  }
+}
+
+
+.center-text {
+  text-align: center;
+}
+
+.order-result {
+  margin-top: 30px;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 20px;
+  .all-cost {
+    font-weight: 700;
+    color: #000;
+    font-size: 48px;
+  }
+
+  button {
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+    background: transparent;
+    border: none;
+    padding: 5px 0;
+    border-bottom: 2px solid #000;
+  }
+}
+
+.w-100 {
+  width: 100%;
+}

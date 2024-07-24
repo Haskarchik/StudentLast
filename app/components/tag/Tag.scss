@@ -1,0 +1,22 @@
+.tag {
+  background-color: var(--violet);
+  padding: 0.5rem 1rem;
+  border-radius: 1.25rem;
+
+  display: flex;
+  align-items: center;
+
+  .content {
+    color: white;
+    font-weight: 300;
+    margin-right: 0.25rem;
+  }
+}
+
+.tag .delete-button {
+  display: none;
+}
+
+.tag:hover .delete-button {
+  display: inline-flex;
+}

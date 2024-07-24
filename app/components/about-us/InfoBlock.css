@@ -1,0 +1,296 @@
+@charset "UTF-8";
+/*
+ @font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-Heavy.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-BoldItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-HeavyItalic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} */
+/*// Указываем box sizing*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*// Убираем внутренние отступы*/
+ul[class],
+ol[class] {
+  margin: 0;
+  padding: 0;
+}
+
+/*// Убираем внешние отступы*/
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+.root {
+  padding: 0 2rem;
+}
+@media (min-width: 992px) {
+  .root {
+    padding: 0 4rem;
+  }
+}
+
+:root {
+  --font-sans: "Open Sans", sans-serif;
+  --font-jost: "Jost", sans-serif;
+  --white: #f3f3f3;
+  --black: #181818;
+  --grey: #262626;
+  --dull-grey: #494949;
+  --purple: linear-gradient(321.6deg, #9795f0 3.29%, #fbc8d4 101.27%);
+  --light-grey: #e7e7e7;
+  --violet: #6b69e7;
+  --yellow: #ffb930;
+  --red: #f43e49;
+}
+
+/*//Выставляем основные настройки по-умолчанию для body*/
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-image: url("./assets/background.svg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  font-family: var(--font-sans);
+  background: linear-gradient(to bottom, #A7BED7, #A697E0, #9372E9, #6B69E7);
+  scrollbar-color: #800080 #ffffff; /* Фіолетовий колір ползунку і фону */
+}
+
+body::-webkit-scrollbar {
+  width: 0; /* Фіолетовий колір ползунку */
+  visibility: 0;
+}
+
+html {
+  scroll-behavior: auto;
+  scrollbar-color: #800080 #ffffff; /* Фіолетовий колір ползунку і фону */
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #800080; /* Фіолетовий колір ползунку */
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes scroll-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.scroll-up {
+  animation: scroll-up 0.5s ease-in-out;
+}
+
+.scroll-down {
+  animation: scroll-down 0.5s ease-in-out;
+}
+
+/* .App { */
+/* margin-left: 12px; */
+/* } */
+#overlay-root {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.span-article {
+  font-size: 42px;
+  line-height: 42px;
+  font-family: "CASlalomExtended", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  .span-article {
+    font-size: 64px;
+    line-height: 88px;
+  }
+}
+
+@media (max-width: 350px) {
+  .span-article {
+    font-size: 36px;
+  }
+}
+.span-sub-article {
+  font-size: 32px;
+  font-family: "CASlalomExtended", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media (min-width: 425px) {
+  .max-425px {
+    display: none;
+  }
+}
+.MuiAutocomplete-popper {
+  background-color: #6B69E7;
+}
+
+.wrapper-block {
+  background: rgba(243, 243, 243, 0.1);
+  -webkit-backdrop-filter: blur(0.5px);
+          backdrop-filter: blur(0.5px);
+  border: 2px solid #ffffff;
+  height: 11.87rem;
+  min-width: 240px;
+  border-radius: 10px;
+  width: 100%;
+  align-items: center;
+  transition-duration: 0.2s;
+}
+.wrapper-block:hover {
+  background: rgba(0, 0, 0, 0.096);
+}
+@media (min-width: 992px) {
+  .wrapper-block {
+    width: calc(50% - 15px);
+  }
+}
+.wrapper-block .block-item {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .wrapper-block .block-item {
+    padding: 3rem 1.5rem 1.5rem 1.5rem;
+    margin: 0;
+  }
+}
+.wrapper-block .block-item p {
+  display: flex;
+  font-size: 14px;
+  line-height: 22px;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
+.wrapper-block .block-item .center-span {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.wrapper-block .block-item .center-span span {
+  font-family: "CASlalomExtended", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 67px;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+}

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /ua
+Allow: /en
+Allow: /sitemap.xml
+Disallow: /ua/admin
+Disallow: /en/admin	
+
+Sitemap: https://student-helper.com/sitemap.xml

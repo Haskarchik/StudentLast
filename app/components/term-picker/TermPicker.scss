@@ -1,0 +1,24 @@
+.date-picker {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    font-family: Times, Times New Roman, serif;
+  }
+  
+  .date-picker input[type="date"] {
+    width: 100%;
+    background: transparent;
+    border: none;
+    font-weight: 360;
+    border-bottom: 2px solid white; /* Білий бордер */
+    outline: none;
+    color: black; /* Колір тексту */
+    padding: 8px 0;
+    font-size: 15.4px;
+    transition: border 0.3s;
+  }
+  
+  .date-picker input[type="date"]:focus {
+    border-bottom: 2px solid white; /* Бордер при фокусі */
+
+  }

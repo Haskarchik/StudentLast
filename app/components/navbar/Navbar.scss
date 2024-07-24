@@ -1,0 +1,167 @@
+@import "../../App";
+.wrapper-navbar {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: start;
+  padding-top: 2.75rem;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-family: 'Vollkorn';
+  font-weight: bold;
+  font-style: italic;
+  @include lg {
+    flex-direction: row;
+
+    flex-wrap: nowrap;
+  }
+  .logo-navbar {
+    display: flex;
+    margin-right: 0 2rem;
+    align-self: center;
+  }
+
+  .navbar-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   align-items: center;
+    flex-grow: 1;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @include sm {
+
+    gap:10px;
+    }
+    @include lg {
+      margin-bottom: 0px;
+    margin-top: 0px;
+
+      gap: 3rem;
+      flex-wrap: nowrap;
+    }
+    .navbar-item-box {
+      font-size: 15px;
+  
+     
+      cursor: pointer;
+      position: relative;
+      border: none;
+      background: none;
+      transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+      transition-duration: 400ms;
+      transition-property: color;
+    }
+  
+    .navbar-item-box:focus,
+    .navbar-item-box:hover {
+      color: #fff;
+      text-shadow: 0px 0px 1px #3d3c61;
+      .navbar-item:link {
+        color:#1c1c1f;
+      } .navbar-item{
+        color:#1c1c1f;
+  
+      }
+    }
+  
+    .navbar-item-box:focus:after,
+    .navbar-item-box:hover:after {
+      width: 100%;
+      left: 0%;
+    }
+  
+    .navbar-item-box:after {
+      content: "";
+      pointer-events: none;
+      bottom: -2px;
+      left: 50%;
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background-color: #8a88ec;
+      transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+      transition-duration: 400ms;
+      transition-property: width, left;
+    }
+    .navbar-item {
+    margin: 5px 6px;
+
+      font-size: 16px;
+      color: rgb(53, 53, 53);
+      &:nth-child(1) {
+        order: 1;
+      }
+      &:nth-child(2) {
+        order: 4;
+      }
+      &:nth-child(3) {
+        order: 5;
+      }
+      &:nth-child(4) {
+        order: 6;
+      }
+      &:nth-child(5) {
+        order: 3;
+      }
+      &:nth-child(6) {
+        order: 2;
+      }
+      @include sm {
+        &:nth-child(1) {
+          order: 1;
+        }
+        &:nth-child(2) {
+          order: 2;
+        }
+        &:nth-child(3) {
+          order: 3;
+        }
+        &:nth-child(4) {
+          order: 4;
+        }
+        &:nth-child(5) {
+          order: 5;
+        }
+        &:nth-child(6) {
+          order: 6;
+        }
+        font-size: 18px;
+    margin: 0px ;
+
+      }
+    }
+    .navbar-item:link {
+      text-decoration: none;
+    }
+  }
+
+  .register-button {
+    width: 185px;
+  }
+
+  .sidebar-button {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    span {
+      width: 9.5rem;
+      font-weight: 600;
+
+      line-height: 24px;
+    }
+
+    .sidebar-button-item {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    h1 {
+      font-weight: 600;
+  
+      line-height: 24px;
+    }
+  }
+}

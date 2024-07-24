@@ -1,0 +1,32 @@
+.contact-wrapper {
+  .contact-title {
+    font-weight: 600;
+    color: black;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-content {
+    color: black;
+    text-decoration: none;
+  }
+
+  .contact-content:hover {
+    text-decoration: underline;
+  }
+
+  .contact-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.25rem;
+  }
+
+  .contact-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+    fill: var(--violet);
+
+    flex-shrink: 0;
+  }
+}

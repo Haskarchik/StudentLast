@@ -1,0 +1,17 @@
+@import "../../App";
+.offers {
+  margin-top: 50px;
+
+  .offers-item {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  .navigate-button-wrapper {
+    display: flex;
+    justify-content: center;
+
+    @include lg {
+      display: initial;
+    }
+  }
+}

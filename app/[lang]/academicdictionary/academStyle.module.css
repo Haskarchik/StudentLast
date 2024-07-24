@@ -1,0 +1,28 @@
+.academac_dictionary {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.academac_dictionary h1 {
+  font-family: "Tektur", sans-serif;
+}
+
+.title_and_text {
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-family: "Jura", sans-serif;
+  font-weight: 600;
+  text-align: justify;
+}
+.title_and_text h1 {
+  font-size: 22px;
+  text-align: left;
+}
+@media (min-width: 576px) {
+  .title_and_text {
+    font-size: 25px;
+  }
+  .title_and_text h1 {
+    font-size: 40px;
+  }
+}

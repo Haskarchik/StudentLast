@@ -1,0 +1,32 @@
+.navigate-white-button-style {
+  border: 2px #e4e4e4 solid;
+  width: 205px;
+  height: 50px;
+  border-radius: 90px;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.2s;
+  text-decoration: none;
+  text-align: center;
+  &:hover {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.699);
+    background-color: #7a6ddb;
+    color: var(--white);
+    border: none;
+    border-radius: 5.62rem;
+    cursor: pointer;
+  }
+  :link {
+    text-decoration: none;
+  }
+
+  span {
+    color: #e4e4e4;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

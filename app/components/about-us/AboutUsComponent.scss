@@ -1,0 +1,74 @@
+@import "../../App";
+.about-wrapper {
+  margin-top: 50px;
+  display: flex;
+&:hover{
+  .wrapper-block{
+    animation-play-state: running;
+  }
+}
+  flex-direction: column;
+
+  .about-item {
+    display: flex;
+    flex-direction: column;
+
+    @include lg {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .text-item {
+      padding-top: 2rem;
+      overflow-wrap: break-word;
+      text-align: justify;
+
+      .text-item-description {
+        font-family: 'Roboto Slab';
+        font-weight: 400;
+        text-align: justify;
+      }
+
+      @include lg {
+        width: 50%;
+        text-align: left;
+      }
+
+      .span-br {
+        display: block;
+
+        @include lg {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+    
+    .info-block-item {
+      flex-wrap: wrap;
+      gap: 1.7rem;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: row;
+
+      .block-item {
+        align-items: center;
+        
+        * {
+          width: fit-content;
+        }
+
+        @include lg {
+          align-items: auto;
+
+          * {
+            width: initial;
+          }
+        }
+      }
+
+      @include lg {
+        justify-content: flex-end;
+      }
+    }
+  }
+}

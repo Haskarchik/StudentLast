@@ -1,0 +1,14 @@
+.question-module {
+  background-color: transparent !important;
+  border-top: 1px solid white !important;
+  box-shadow: none !important;
+
+  .question-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+  }
+
+  .question-summary {
+    padding-left: 0;
+  }
+}

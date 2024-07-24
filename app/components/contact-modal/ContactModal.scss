@@ -1,0 +1,20 @@
+@import '../../App';
+.contact-modal {
+  background: linear-gradient(to right, #bfd4f1, #b6bccf);
+  width: 100% !important;
+
+  @media screen and (max-width: $screen-sm-min) {
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+  }
+
+  @include lg {
+    width: initial !important;
+  }
+}
+
+.contact-modal-title {
+  font-weight: bold !important;
+  text-align: center;
+  font-size: 1.25em;
+}

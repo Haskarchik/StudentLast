@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9751eff4.css",
+    "main.js": "/static/js/main.734a4ac1.js",
+    "static/media/background.svg": "/static/media/background.8d876ac6f49f6ef0db27.svg",
+    "static/media/CASlalomExtended-Italic.woff2": "/static/media/CASlalomExtended-Italic.9f09ec00046c5149f367.woff2",
+    "static/media/CASlalomExtended-MediumItalic.woff2": "/static/media/CASlalomExtended-MediumItalic.1be06c14f1fa00b3115b.woff2",
+    "static/media/CASlalomExtended-BoldItalic.woff2": "/static/media/CASlalomExtended-BoldItalic.d8a02a2024377aff4f3a.woff2",
+    "static/media/profile_image2.svg": "/static/media/profile_image2.f2313666fc76daf3f0d1a6c0e9c06e7c.svg",
+    "static/media/CASlalomExtended-LightItalic.woff2": "/static/media/CASlalomExtended-LightItalic.8f1e39648dcce6d31d6b.woff2",
+    "static/media/CASlalomExtended-Regular.woff2": "/static/media/CASlalomExtended-Regular.bfadc6a19ac922221649.woff2",
+    "static/media/CASlalomExtended-Bold.woff2": "/static/media/CASlalomExtended-Bold.ed64d2ceeed3c9528502.woff2",
+    "static/media/CASlalomExtended-Medium.woff2": "/static/media/CASlalomExtended-Medium.bd2e7ba59cd07aa3a59d.woff2",
+    "static/media/CASlalomExtended-HeavyItalic.woff2": "/static/media/CASlalomExtended-HeavyItalic.ab2a930b00c4055f4e55.woff2",
+    "static/media/CASlalomExtended-Light.woff2": "/static/media/CASlalomExtended-Light.ad82b5f6f0d8784460ac.woff2",
+    "static/media/CASlalomExtended-Heavy.woff2": "/static/media/CASlalomExtended-Heavy.762752312709f6355670.woff2",
+    "static/media/profile_image1.svg": "/static/media/profile_image1.66ce930d3f5ab30a45a377c427715d5a.svg",
+    "static/media/profile_image3.svg": "/static/media/profile_image3.1854e26e41077f567d75f0324f049406.svg",
+    "static/media/profile_image4.svg": "/static/media/profile_image4.e5a6b2a6f3bd1048d6a472aee7292235.svg",
+    "static/media/instagram-logo.svg": "/static/media/instagram-logo.34c5dd1f4882ad5f9ac26bd147b1af32.svg",
+    "index.html": "/index.html",
+    "static/media/tiktok-icon.svg": "/static/media/tiktok-icon.03e982600e1c7cc07ae286924b284e52.svg",
+    "static/media/country.svg": "/static/media/country.daf87bad28376b8da61d.svg",
+    "static/media/uk-flag.svg": "/static/media/uk-flag.2d19fed4fb288f7b8a8591bbe3b70429.svg",
+    "static/media/ukraine-flag-icon.svg": "/static/media/ukraine-flag-icon.130710079d99e28cf2c82714730988b2.svg",
+    "static/media/telegram-logo.svg": "/static/media/telegram-logo.26f5063229afce82ded6055e233d0e0b.svg",
+    "static/media/email-icon.svg": "/static/media/email-icon.5b6ebdef12edbec5e80077b2f3ad7d71.svg",
+    "static/media/clock.svg": "/static/media/clock.fd9bd32da3fb16bba1b9458908837ff7.svg",
+    "static/media/add-icon.svg": "/static/media/add-icon.65fae5a4ce7d134a3fa34b40f344a302.svg",
+    "static/media/LoopMark.svg": "/static/media/LoopMark.6a9afd73f0f727dcb09d973264a2c72d.svg",
+    "static/media/phone-icon.svg": "/static/media/phone-icon.a5438e2916e699f0512d2d6590e82516.svg",
+    "static/media/star.svg": "/static/media/star.64c102e14f77c0bfd390560c5987bf84.svg",
+    "main.9751eff4.css.map": "/static/css/main.9751eff4.css.map",
+    "main.734a4ac1.js.map": "/static/js/main.734a4ac1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9751eff4.css",
+    "static/js/main.734a4ac1.js"
+  ]
+}

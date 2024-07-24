@@ -1,0 +1,47 @@
+@import "../../App";
+.review-wrapper {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  transition-duration: 0.3s;
+  &:hover {
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.075);
+    .review-text {
+    font-size: 18px;
+    transition-duration: 0.5s;
+  }
+  }
+  @include lg {
+    flex-direction: row;
+  }
+
+  .review-username {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .review-stars {
+    padding: 0.5rem 0;
+  }
+
+  .review-image {
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
+    object-fit: cover;
+  }
+
+  .review-text {
+    margin-bottom: 0.5rem;
+    font-family: "Finlandica";
+    font-weight: 600;
+    font-style: italic;
+    transition-duration: 1s;
+  }
+}
+a {
+  text-decoration: none;
+}

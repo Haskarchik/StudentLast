@@ -1,0 +1,132 @@
+@import "../../App";
+.wrapper-footer {
+  margin-top: 7.5rem;
+  @media (max-width:768px) {
+    margin-top: 60px;
+  }
+  position: relative;
+  border-top: 2px white solid;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Vollkorn';
+  font-weight: 500;
+ /*  font-style: italic; */
+  .footer-item {
+    margin: 2.56rem 0 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    a{
+      img{
+        width: 200px;
+      }
+    }
+  }
+
+  .copyright-block {
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    margin-top: 3rem;
+
+    .footer-icon {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+
+      a {
+        transition-duration: 0.2s;
+        &:hover {
+          box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.699);
+          background-color: #7a6ddb;
+          color: var(--white);
+          border: none;
+          border-radius: 5.62rem;
+          cursor: pointer;
+        }
+      }
+      .logo-circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4rem;
+        height: 4rem;
+        // background-color: var(--violet);
+        border-radius: 50%;
+        cursor: pointer;
+
+        .logo-footer {
+          color: white;
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--grey);
+    a {
+      transition-duration: 0.2s;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .nav-footer {
+    display: flex;
+    gap: 11%;
+    flex-direction: row;
+    max-width: 50%;
+
+    p {
+      color: var(--black);
+      font-size: 16.0904px;
+      line-height: 24px;
+      white-space: nowrap;
+    }
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    height: 2px;
+    width: 5.5%;
+    background-color: var(--white);
+  }
+
+  &:after {
+    right: -5.5%;
+  }
+
+  &:before {
+    left: -5.5%;
+  }
+
+  .span-footer {
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 68px;
+  }
+
+  .copyrights {
+    text-align: center;
+
+    @include lg {
+      text-align: initial;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}

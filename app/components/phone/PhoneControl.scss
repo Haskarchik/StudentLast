@@ -1,0 +1,45 @@
+.themeInput {
+  padding: 10px 10px 10px 0;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  outline: none;
+  font-family: Times, Times New Roman, serif;
+}
+
+.phone-container {
+  display: flex;
+  align-items: center;
+  .phone-dropdown {
+    width: 8%;
+    border-bottom: 1px solid var(--white);
+
+    .phone-list {
+      align-items: center;
+      text-align: center;
+    }
+    background-image: url('../../assets/country.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1.25rem;
+  }
+
+
+  .phone-field {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+
+    .country-menu-item {
+      display: flex;
+      flex-direction: row;
+      gap: 4px;
+    }
+  }
+}

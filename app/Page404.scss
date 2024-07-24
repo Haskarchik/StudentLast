@@ -1,0 +1,17 @@
+.wrapper-page404{
+    h1{
+        font-weight: 600;
+        font-size: 35px;
+    }
+    .description{
+        font-size: 20px;
+    }
+    .list-pages{
+        display: flex;
+        flex-direction: column;
+        button{
+            margin-top: 10px;
+            width: 250px;
+        }
+    }
+}

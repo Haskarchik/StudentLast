@@ -1,0 +1,62 @@
+@import "../../App";
+@keyframes scale {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.reviewsCard-wrapper {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+
+  @include lg {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .reviewsCard-right {
+    padding-top: 2rem;
+
+    @include lg {
+      width: 50%;
+    }
+
+    .map-wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      @include lg {
+        animation-play-state: paused;
+        animation-name: scale;
+        animation-duration: .7s;
+        animation-fill-mode: backwards;
+      }
+   
+
+      gap: 1.7rem;
+      width: 100%;
+    }
+    .button-wrapper {
+      display: flex;
+      margin-top: 2rem;
+      justify-content: center;
+
+      @include lg {
+        justify-content: flex-end;
+      }
+    }
+  }
+  &:hover {
+    .map-wrapper {
+      animation-play-state: running;
+    }
+  }
+}

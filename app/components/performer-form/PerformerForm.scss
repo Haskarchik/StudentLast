@@ -1,0 +1,77 @@
+@import "../../App";
+
+.wrapper-performer-form {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+
+  @include lg {
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 8.75rem;
+  }
+
+
+  .performer-form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    input{    
+      font-weight: 200;
+      font-family: 'Oswald';
+    &:focus{
+      font-weight: 400;
+    }}
+    .button-wrapper {
+      display: flex;
+      justify-content: center;
+
+      @include lg {
+        justify-content: end;
+      }
+    }
+
+    .form-controls {
+      display: flex;
+      flex-direction: column;
+      border-bottom: white;
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+    }
+
+    @include lg {
+      width: 50%;
+    }
+
+    p {
+      text-align: justify;
+      color: black;
+      font-size: 18px;
+
+      @include lg {
+        text-align: left;
+      }
+    }
+
+    .button-performer {
+      width: 11rem;
+    }
+  }
+
+  .tags-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .span-br {
+    display: inline;
+    @include lg {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import "../../App";
+.wrapper-offers {
+  margin-bottom: 2rem;
+
+
+  .offers-pagination {
+    display: flex;
+    justify-content: end;
+    padding: 1rem;
+  }
+}

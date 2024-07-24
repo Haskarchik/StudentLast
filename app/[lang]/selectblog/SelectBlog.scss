@@ -1,0 +1,59 @@
+@import "../../App.scss";
+
+.blog-container{
+    margin-top: 20px;
+    @media screen and (max-width: $screen-sm-min) {
+        margin-left: 1rem !important;
+        margin-right: 1rem !important;
+    }
+    .descripion{
+        @media (min-width:1300px) {
+            margin: 0 7.5%;
+        }
+    }
+    .image{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        img{
+            border-radius: 3%;
+            align-items: center;
+            @media (min-width:1024px) {
+                max-height: 35rem;
+                width: auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            @media (max-width:1024px) {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+    h1{
+        margin-top: 10px;
+        font-weight: 800;
+        font-size: 35px;
+        text-align: center;
+        @media (max-width:768px) {
+            font-size: 25px;
+        }
+    }
+    .button-more{
+        display: flex;
+        margin-top: 15px;
+        justify-content: right;
+        button{
+            background-color: #2D8EEE;
+            color: white;
+            border-radius: 90px;
+            padding: 12px 32px;
+
+        }
+    }
+    .title-more-articles{
+        margin-top: 40px;
+    }
+}

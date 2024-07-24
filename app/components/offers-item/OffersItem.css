@@ -1,0 +1,379 @@
+@charset "UTF-8";
+/*
+ @font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-Heavy.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-MediumItalic.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-BoldItalic.woff2') format('woff2');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-HeavyItalic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-LightItalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CASlalomExtended';
+  src: url('assets/fonts/CASlalomExtended-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} */
+/*// Указываем box sizing*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*// Убираем внутренние отступы*/
+ul[class],
+ol[class] {
+  margin: 0;
+  padding: 0;
+}
+
+/*// Убираем внешние отступы*/
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+.root {
+  padding: 0 2rem;
+}
+@media (min-width: 992px) {
+  .root {
+    padding: 0 4rem;
+  }
+}
+
+:root {
+  --font-sans: "Open Sans", sans-serif;
+  --font-jost: "Jost", sans-serif;
+  --white: #f3f3f3;
+  --black: #181818;
+  --grey: #262626;
+  --dull-grey: #494949;
+  --purple: linear-gradient(321.6deg, #9795f0 3.29%, #fbc8d4 101.27%);
+  --light-grey: #e7e7e7;
+  --violet: #6b69e7;
+  --yellow: #ffb930;
+  --red: #f43e49;
+}
+
+/*//Выставляем основные настройки по-умолчанию для body*/
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-image: url("./assets/background.svg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+  font-family: var(--font-sans);
+  background: linear-gradient(to bottom, #A7BED7, #A697E0, #9372E9, #6B69E7);
+  scrollbar-color: #800080 #ffffff; /* Фіолетовий колір ползунку і фону */
+}
+
+body::-webkit-scrollbar {
+  width: 0; /* Фіолетовий колір ползунку */
+  visibility: 0;
+}
+
+html {
+  scroll-behavior: auto;
+  scrollbar-color: #800080 #ffffff; /* Фіолетовий колір ползунку і фону */
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #800080; /* Фіолетовий колір ползунку */
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes scroll-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.scroll-up {
+  animation: scroll-up 0.5s ease-in-out;
+}
+
+.scroll-down {
+  animation: scroll-down 0.5s ease-in-out;
+}
+
+/* .App { */
+/* margin-left: 12px; */
+/* } */
+#overlay-root {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.span-article {
+  font-size: 42px;
+  line-height: 42px;
+  font-family: "CASlalomExtended", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  .span-article {
+    font-size: 64px;
+    line-height: 88px;
+  }
+}
+
+@media (max-width: 350px) {
+  .span-article {
+    font-size: 36px;
+  }
+}
+.span-sub-article {
+  font-size: 32px;
+  font-family: "CASlalomExtended", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media (min-width: 425px) {
+  .max-425px {
+    display: none;
+  }
+}
+.MuiAutocomplete-popper {
+  background-color: #6B69E7;
+}
+
+@keyframes arrow-line-animation {
+  50% {
+    width: 120px;
+  }
+}
+@keyframes arrow-animation {
+  50% {
+    right: -10px;
+  }
+}
+.offers-wrapper {
+  padding: 10px;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1px solid var(--white);
+  height: 100%;
+  transition-duration: 0.3s;
+}
+.offers-wrapper:hover {
+  background: rgba(0, 0, 0, 0.072);
+}
+.offers-wrapper:hover .time-span img {
+  transform: rotate(180deg);
+}
+.offers-wrapper:first-child {
+  border-top: 1px solid var(--white);
+}
+.offers-wrapper .offers-items {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+.offers-wrapper .offers-items:hover .arrow-icon::after, .offers-wrapper .offers-items:hover .arrow-icon::before {
+  animation: arrow-animation 0.75s ease-in-out 1;
+}
+.offers-wrapper .offers-items:hover .arrow-icon {
+  animation: arrow-line-animation 0.75s ease-in-out 1;
+}
+@media (min-width: 992px) {
+  .offers-wrapper .offers-items {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.offers-wrapper .offers-items .name-price {
+  display: grid;
+  grid-template-columns: 6fr 5fr;
+  width: 100%;
+  gap: 1rem;
+}
+@media (min-width: 992px) {
+  .offers-wrapper .offers-items .name-price {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+.offers-wrapper .offers-items .name-price .work-name-div {
+  flex-grow: 0;
+}
+@media (min-width: 992px) {
+  .offers-wrapper .offers-items .name-price .work-name-div {
+    flex-shrink: 0;
+  }
+}
+.offers-wrapper .offers-items .name-price .work-span {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+}
+.offers-wrapper .offers-items .name-price .price-div {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .offers-wrapper .offers-items .name-price .price-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.offers-wrapper .offers-items .name-price .time-span {
+  display: flex;
+  align-items: center;
+}
+.offers-wrapper .offers-items .name-price .time-span img {
+  transition-duration: 0.5s;
+}
+.offers-wrapper .offers-items .work-link {
+  text-decoration: none;
+  color: black;
+}
+.offers-wrapper .offers-items .time-arrow {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  width: 150px;
+}
+@media (min-width: 992px) {
+  .offers-wrapper .offers-items .time-arrow {
+    padding-left: 0.5rem;
+  }
+}
+.offers-wrapper .offers-items .arrow-icon {
+  display: none;
+  height: 2px;
+  width: 90px;
+  background-color: #000;
+  position: relative;
+}
+.offers-wrapper .offers-items .arrow-icon::after, .offers-wrapper .offers-items .arrow-icon::before {
+  content: "";
+  background-color: #000;
+  width: 11px;
+  height: 2px;
+  position: absolute;
+  top: 0px;
+  right: -10px;
+}
+.offers-wrapper .offers-items .arrow-icon::after {
+  top: -4px;
+  transform: rotate(45deg);
+}
+.offers-wrapper .offers-items .arrow-icon::before {
+  top: 4px;
+  transform: rotate(-45deg);
+}
+@media (min-width: 992px) {
+  .offers-wrapper .offers-items .arrow-icon {
+    display: inherit;
+  }
+}
+.offers-wrapper .offers-items .clock-icon {
+  margin-right: 0.5rem;
+}

@@ -1,0 +1,17 @@
+@import "../../App";
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+
+
+  @include lg {
+    display: grid;
+    align-items: flex-end;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+
+    
+
+  }
+
+  }

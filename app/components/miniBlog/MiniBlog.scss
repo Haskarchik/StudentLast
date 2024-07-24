@@ -1,0 +1,171 @@
+@import "../../App.scss";
+
+.list-blog1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  @media (min-width:1400px) {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  a{
+    width: calc(33.3333% - 20px); /* 3 блоги в рядку */
+    transition: transform 0.3s ease-in-out;
+    transition-duration: .3s;
+
+    @media (max-width: 1024px) {
+      width: calc(50% - 20px); /* 2 блоги в рядку для ширини більше 425, але менше 768 */
+    }
+
+    @media (max-width: 768px) {
+      width: 100%; /* 1 блог на всю ширину для ширини менше 425 */
+    }
+
+    &:hover {
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.144); /* Тінь для кожного блогу */
+    transform: scale(1.05);
+    }
+  }
+  .views-with-time{
+    display: flex;
+    flex-direction: row;
+    color: #2D8EEE;
+    justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: 20px;
+    align-items: center;
+    align-self: center;
+    margin-bottom: 5px;
+    .views{
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.list-blog0 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  a{
+    width: calc(25% - 20px); /* 3 блоги в рядку */
+    transition: transform 0.3s ease-in-out;
+    transition-duration: .3s;
+
+    @media (max-width: 1300px) {
+      width: calc(50% - 20px); /* 2 блоги в рядку для ширини більше 425, але менше 768 */
+    }
+
+    @media (max-width: 768px) {
+      width: 100%; /* 1 блог на всю ширину для ширини менше 425 */
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.144); /* Тінь для кожного блогу */
+
+    }
+  }
+  .views-with-time{
+    display: flex;
+    flex-direction: row;
+    color: #2D8EEE;
+    justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 3%;
+    font-size: 20px;
+    align-items: center;
+    align-self: center;
+    margin-bottom: 5px;
+    .views{
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.blog {
+  width: 100%;
+}
+
+.img {
+  width: 100%;
+  height: 200px; /* Задайте висоту, яку ви бажаєте */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.text {
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+  flex-grow: 1;
+}
+
+.description {
+  font-size: 15px;
+  color: #555;
+}
+.list-blog0 {
+  margin-top: 40px;
+}
+
+.list-blog1 {
+  margin-top: 40px;
+}
+
+.list-blog1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Відстань між блогами */
+  a{
+      color: unset;
+      text-decoration: none;
+  }
+}
+
+.list-blog0 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Відстань між блогами */
+  a{
+      color: unset;
+      text-decoration: none;
+  }
+}
+
+.blog {
+  width: 100%; /* Забезпечити, що блоги розтягуються на всю ширину контейнера .list-blog */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для кожного блогу */
+  border-radius: 8px; /* Округлені кути для блогу */
+  overflow: hidden; /* Запобігає витіканню тіні за межі блогу */
+}
+
+.img {
+  object-fit: cover;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0; /* Округлені кути тільки зверху */
+  overflow: hidden; /* Запобігає витіканню тіні за межі блогу */
+  
+}
+
+.text {
+  padding: 16px; /* Відступи всередині блогу */
+}
+
+.title {
+  margin-bottom: 8px; /* Відстань між заголовком та описом */
+  h1 {
+    font-size: 23px;
+    margin: 0; /* Зняти зовнішні відступи */
+  }
+}
+
+
+.description {
+  color: #555; /* Колір тексту опису */
+}

@@ -1,0 +1,89 @@
+@import "../../App";
+
+.language-select {
+  display: flex;
+  flex-direction: row;
+  margin: 0 3rem;
+  margin-bottom: 12px;
+  a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color:gray;
+    align-items: center;
+    line-height: 1.5;
+    height: 40px;
+    width: 60px;
+    justify-content: space-between;
+    font-weight: 500;
+    span{
+      padding-right: 7px;
+    }
+  }
+  .active{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    color:black;
+    align-items: center;
+    line-height: 1.5;
+    height: 40px;
+    width: 60px;
+    justify-content: space-between;
+
+    &:hover{
+      background-color: #6f6dec79;
+      color: var(--white);
+      border: none;
+      border-radius: 5.62rem;
+      cursor: pointer;
+    }
+  }
+
+  @include sm{
+  margin-bottom: 0px;
+
+  }
+  .language-divider {
+    margin: 0 3.5px;
+  }
+
+  .vertical-divider {
+    width: 2px;
+    color: white;
+    border: none;
+    border-left: 1px solid hsla(200, 10%, 50%, 100);
+  }
+
+  .language-item {
+    padding: 0.25rem !important;
+   
+    min-width: auto;
+    border-radius: 5.62rem;
+  font-family: 'Vollkorn';
+font-weight: 500;
+.language-item-lang{
+  display: block;
+  margin-top: 1px;
+  @include lg{
+    margin-top: 5px;
+  }
+}
+    &:hover{
+      background-color: #6f6dec79;
+          color: var(--white);
+          border: none;
+          border-radius: 5.62rem;
+          cursor: pointer;
+    }
+  }
+
+  .flag-icon {
+    margin-left: 4px;
+    width: 1.5rem;
+    height: 1.5rem;
+    image-resolution: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}

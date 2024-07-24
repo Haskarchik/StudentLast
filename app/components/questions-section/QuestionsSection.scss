@@ -1,0 +1,16 @@
+.question-wrapper {
+  margin: 6rem 0;
+  &:hover{
+    p{
+      color: black;
+
+    }
+  }
+  p{
+ transition-duration: .3s;
+  }
+  .question-section-title {
+    margin-bottom: 2rem;
+   
+  }
+}
