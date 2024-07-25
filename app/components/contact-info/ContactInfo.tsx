@@ -17,7 +17,7 @@ export default function ContactInfo({contact_info}:{contact_info:string}) {
         </a>
       </div>
       <div className="contact-item">
-        <FaPhoneAlt size={30} color='#6b69e7' />&nbsp;
+        <FaPhoneAlt size={27} color='#6b69e7' />&nbsp;
         <a type="tel" href={`tel:${contactInfo.phone}`} className="contact-content">
           {contactInfo.phone}
         </a>

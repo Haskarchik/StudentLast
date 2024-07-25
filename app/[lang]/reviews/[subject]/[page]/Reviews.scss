@@ -2,9 +2,7 @@
 .pagination {
   display: flex;
   justify-content: center;
-  @include lg {
-    justify-content: end;
-  }
+/*  */
 }
 
 .reviews-title {

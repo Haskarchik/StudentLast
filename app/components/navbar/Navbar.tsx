@@ -5,6 +5,7 @@ import { getDictionary } from "@/lib/dictionary";
 import LanguageSelect from "../language-select/LanguageSelect";
 import Image from "next/image";
 import ContactsModal from "../contact-modal/ContactsModal";
+import logo from '../../../public/logo.svg'
 
 const Navbar = async({lang}:{lang:Locale}) => {
   const {Routes,Performer}=await getDictionary(lang);
@@ -12,7 +13,7 @@ const Navbar = async({lang}:{lang:Locale}) => {
     <>
       <div className="wrapper-navbar">
         <a href={`/${lang}`} className="logo-navbar">
-          <Image src={"/review-photos/logo.jpg"} width={200} height={50} alt="logo" />
+          <Image src={logo} width={200} height={50} alt="logo" />
         </a>
         <div className="navbar-items">
           <div className="navbar-item-box">
@@ -46,13 +47,6 @@ const Navbar = async({lang}:{lang:Locale}) => {
           <div className="navbar-item-box">
             <Link
               className="navbar-item"
-              href={`/${lang}/academicdictionary`}>
-              {Routes.academic_dictionary}
-            </Link>
-          </div>
-          <div className="navbar-item-box">
-            <Link
-              className="navbar-item"
               href={`/${lang}/performer`}>
               {Routes.performer}
             </Link>
@@ -60,7 +54,14 @@ const Navbar = async({lang}:{lang:Locale}) => {
           <div className="navbar-item-box">
             <Link
               className="navbar-item"
-              href={`/${lang}/blog/1`}>
+              href={`/${lang}/contact`}>
+              {Routes.contact}
+            </Link>
+          </div>
+          <div className="navbar-item-box">
+            <Link
+              className="navbar-item"
+              href={`/${lang}/blog`}>
               {Routes.blog}
             </Link>
           </div>

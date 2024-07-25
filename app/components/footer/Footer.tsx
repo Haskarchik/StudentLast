@@ -5,6 +5,7 @@ import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
 import Link from "next/link";
 import Image from "next/image";
+import logo from '../../../public/logo.svg'
 
 const Footer = async({lang}:{lang:Locale}) => {
 
@@ -12,7 +13,7 @@ const Footer = async({lang}:{lang:Locale}) => {
     <div className="wrapper-footer">
       <div className="footer-item">
         <Link href={`/${lang}`}>
-          <Image width={100} height={50} src={"/review-photos/logo.jpg"} alt="logo"  />
+          <Image width={100} height={50} src={logo} alt="logo"  />
         </Link>
       </div>
       {/*<span className="span-footer">Student Helper</span>*/}

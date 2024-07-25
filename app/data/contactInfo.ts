@@ -1,4 +1,4 @@
 export const contactInfo = {
   email: 'studenthelperofficial69@gmail.com',
-  phone: '+(380) 67 835 8568'
+  phone: '+(380) 68 394 7289'
 };
