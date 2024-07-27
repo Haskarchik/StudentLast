@@ -3,6 +3,7 @@ import { Locale } from "@/i18n.config";
 import Link from "next/link";
 import { getDictionary } from "@/lib/dictionary";
 import LanguageSelect from "../language-select/LanguageSelect";
+import SetLanguage from "../setLanguage/SetLanguage";
 import Image from "next/image";
 import ContactsModal from "../contact-modal/ContactsModal";
 import logo from '../../../public/logo.svg'
@@ -67,6 +68,7 @@ const Navbar = async({lang}:{lang:Locale}) => {
           </div>
         </div>
         <LanguageSelect lang={lang} />
+        <SetLanguage  lang={lang}/>
         <ContactsModal connect_with_us={Performer.connect_with_us} social_network={Routes.social_network} contact_info={Routes.contact_info} get_touch={Routes.get_touch} />
       </div>
     </>
