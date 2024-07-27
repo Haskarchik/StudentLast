@@ -4,38 +4,44 @@ import styles from "./style.module.scss";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { Locale, i18n } from "@/i18n.config";
 
 const SetLanguage = ({ lang }) => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   const items = [
-    { id: 1, src: "../../assets/flags/FlagUA.svg", code: "ua" },
-    { id: 2, src: "../../assets/flags/FlagRU.svg", code: "en" },
+    { id: 1, src: "/review-photos/flags1/FlagUA.svg", code: "ua" },
+    { id: 2, src: "/review-photos/flags1/FlagRU.svg", code: "en" },
     /* { id: 3, src: '/Flags/FlagEN.png', code: 'en' }, */
   ];
-  /*  const { i18n } = useTranslation(); */
+  const { i18n } = useTranslation();
   const [selectedItem, setSelectedItem] = useState(
     items.find((item) => item.code === lang)
   );
-  console.log(lang);
+
   const [language, setLanguage] = useState(
     items.filter((element) => element.id !== selectedItem.id)
   );
-  const { pathname, asPath, query } = router;
 
-  const handleItemClick = (item) => {
+  const handleItemClick = async (item) => {
     setIsOpen(false);
     setSelectedItem(item);
     setLanguage(items.filter((element) => element.id !== item.id));
-    router
-      .replace({ pathname, query }, asPath, { locale: item.code })
-      .then(() => {
+
+    const currentPath = window.location.pathname.slice(3);
+    const currentSearch = window.location.search;
+
+    try {
+      await router.replace(`/${item.code}${currentPath}${currentSearch}`);
+      if (i18n.changeLanguage) {
         i18n.changeLanguage(item.code);
-      });
-    isOpen
-      ? document.body.classList.remove("overflow-hidden")
-      : document.body.classList.add("overflow-hidden");
+      } else {
+        console.error("i18n.changeLanguage is not available");
+      }
+    } catch (error) {
+      console.error('Error changing language:', error);
+    }
+
+    document.body.classList.toggle("overflow-hidden", !isOpen);
     setIsOpen(!isOpen);
   };
 
@@ -50,6 +56,7 @@ const SetLanguage = ({ lang }) => {
     document.addEventListener("click", handleClickOutside);
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
+
   return (
     <div
       ref={ref}
@@ -60,7 +67,7 @@ const SetLanguage = ({ lang }) => {
         className={
           isOpen
             ? styles.dropdown_header
-            : styles.dropdown_header + " " + styles.dropdown_header_open
+            : `${styles.dropdown_header} ${styles.dropdown_header_open}`
         }
       >
         <Image
@@ -79,7 +86,7 @@ const SetLanguage = ({ lang }) => {
       <div
         className={
           isOpen
-            ? styles.dropdown_list + " " + styles.open
+            ? `${styles.dropdown_list} ${styles.open}`
             : styles.dropdown_list
         }
       >
@@ -107,7 +114,7 @@ const SetLanguage = ({ lang }) => {
       <div
         className={
           isOpen
-            ? styles.down_arrow + " " + styles.down_arrow_open
+            ? `${styles.down_arrow} ${styles.down_arrow_open}`
             : styles.down_arrow
         }
       ></div>

@@ -1,21 +1,24 @@
-import i18next from 'i18next';
-import en from '../../dictionaries/en.json'
-import ua from '../../dictionaries/ua.json'
-i18next.init({
-  lng: 'en', // if you're using a language detector, do not define the lng option
-  debug: true,
-  resources: {
-    en: {
-      translation: {
-        en
-      }
-    },ua: {
-        translation: {
-          ua
-        }
-      }
-  }
-});
-// initialized and ready to go!
-// i18next is already initialized, because the translation resources where passed via init function
-document.getElementById('output').innerHTML = i18next.t('key');
+import en from "../../dictionaries/en.json";
+import ua from "../../dictionaries/ua.json";
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+
+i18n
+  .use(initReactI18next) // i18next для React
+  .init({
+    resources: {
+      en: {
+        translation: en, // ваші переклади
+      },
+      ua: {
+        translation: ua, // ваші переклади
+      },
+    },
+    lng: "ua", // мова за замовчуванням
+    fallbackLng: "ua",
+    interpolation: {
+      escapeValue: false,
+    },
+  });
+
+export default i18n;

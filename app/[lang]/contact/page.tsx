@@ -1,8 +1,12 @@
-import React from 'react'
+/* import { LetsWorkTogether } from '@/features/sections/LetsWorkTogether';
+import { LocationMap } from '@/features/sections/LocationMap';
 
-export default function page() {
-    
+export default function Page() {
   return (
-    <div>Contact</div>
-  )
+    <>
+      <LetsWorkTogether />
+      <LocationMap />
+    </>
+  );
 }
+ */
