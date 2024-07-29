@@ -1,13 +1,11 @@
-@import '@/styles/vars.scss';
 
 .work-together {
   margin-top: 170px;
   display: flex;
   justify-content: space-between;
-  font-family: $main-font;
   width: 100%;
   flex-grow: 1;
-  @include media(phone) {
+@media (max-width:1400px){
    margin-top: 20px;
     flex-direction: column;
   padding-top: 80px;
@@ -21,8 +19,8 @@
     font-size: 40px;
     line-height: 150%;
     margin-bottom: 12px;
-    color: $white;
-    @include media(phone) {
+    color: white;
+  @media (max-width:1400px){
       font-size: 20px;
       line-height: 130%;
     }
@@ -30,16 +28,16 @@
   &__desc {
     font-size: 16px;
     line-height: 150%;
-    color: $dark-grey;
+    color: rgb(236, 235, 235);
     font-weight: 400;
     text-align: justify;
-    @include media(phone) {
+  @media (max-width:1400px){
       font-size: 14px;
       line-height: 150%;
     }
 
     i {
-      color: $white;
+      color: white;
       font-style: normal;
     }
   }
@@ -48,7 +46,7 @@
     flex-grow: 1;
     max-width: 600px;
     padding-top: 7px;
-    @include media(phone) {
+  @media (max-width:1400px){
     padding-top: 0px;
   }
   }

@@ -14,6 +14,7 @@ const SetLanguage = ({ lang }) => {
     /* { id: 3, src: '/Flags/FlagEN.png', code: 'en' }, */
   ];
   const { i18n } = useTranslation();
+
   const [selectedItem, setSelectedItem] = useState(
     items.find((item) => item.code === lang)
   );
@@ -26,7 +27,7 @@ const SetLanguage = ({ lang }) => {
     setIsOpen(false);
     setSelectedItem(item);
     setLanguage(items.filter((element) => element.id !== item.id));
-
+    lang = language
     const currentPath = window.location.pathname.slice(3);
     const currentSearch = window.location.search;
 

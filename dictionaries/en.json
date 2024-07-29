@@ -32,7 +32,7 @@
     "reliability": "reliability"
   },
   "reviews": {
-    "type_of_work":"Type of work",
+    "type_of_work": "Type of work",
     "alina_username": "Alina Storitska",
     "alina_review": "I am very satisfied with the work! Everything was done at a high level.",
     "markiyan_username": "Markiyan Kutz",
@@ -532,7 +532,7 @@
     "services": "Services",
     "list_services": "List of services",
     "name_services": "Enter the name of the service",
-    "not-found":"Nothing found"
+    "not-found": "Nothing found"
   },
   "Routes": {
     "main_page": "Home",
@@ -543,8 +543,8 @@
     "get_touch": "Get in touch",
     "contact_info": "Contact Information",
     "social_network": "Social networks",
-    "blog":"Blog",
-    "contact":"Contact"
+    "blog": "Blog",
+    "contact": "Contact"
   },
   "Performer": {
     "description": "Student Helper is a good way to increase your income, work from home at a time convenient for you.",
@@ -1099,8 +1099,21 @@
   },
   "blog": {
     "minutes": " m",
-    "more":"More",
-    "article":"Article",
-    "similarArticles":"Similar articles"
+    "more": "More",
+    "article": "Article",
+    "similarArticles": "Similar articles"
+  },
+  "contactUs": {
+    "title": "Свяжитесь с нами",
+    "name": "Имя",
+    "phone": "Телефон",
+    "email": "Электронная почта",
+    "desc": "Какое решение для бизнеса Вам нужно предоставить?",
+    "descPlaceholder": "Кратко опишите проект...",
+    "btn": "Отправить"
+  },
+  "workTogether": {
+    "title": "Будем работать вместе!",
+    "desc": "Мы всегда готовы обсудить Ваш следующий проект! Пишите нам на почту <i> support@fullstack-innovations.com </i> или заполните форму. Наши специалисты с нетерпением ждут возможности сотрудничества именно с Вами."
   }
 }

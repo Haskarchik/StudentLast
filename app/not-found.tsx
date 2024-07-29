@@ -61,6 +61,7 @@ const Page404 = async({isHederAndFooter=true}) => {
                 </Link>
               ))}
             </div>
+            
             {isHederAndFooter?
               <Footer lang="ua" />
               :

@@ -2,7 +2,7 @@
 import { useEffect, useMemo } from 'react';
 import styles from './style.module.scss';
 
-export const LocationMap = () => {
+export const LocationMap = ({lang}) => {
   const lvivCoordinates = useMemo(() => ({ lat: 49.8397, lng: 24.0297 }), []);
 
   useEffect(() => {
