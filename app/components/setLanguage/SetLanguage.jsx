@@ -10,7 +10,7 @@ const SetLanguage = ({ lang }) => {
   const router = useRouter();
   const items = [
     { id: 1, src: "/review-photos/flags1/FlagUA.svg", code: "ua" },
-    { id: 2, src: "/review-photos/flags1/FlagRU.svg", code: "en" },
+    { id: 2, src: "/review-photos/flags1/FlagRU.svg", code: "ru" },
     /* { id: 3, src: '/Flags/FlagEN.png', code: 'en' }, */
   ];
   const { i18n } = useTranslation();

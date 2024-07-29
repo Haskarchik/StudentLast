@@ -16,33 +16,6 @@ export const metadata: Metadata = {
 const Page404 = async({isHederAndFooter=true}) => {
   const {Page404,Routes}=await getDictionary("ua")
 
-  const pages = [
-    {
-      id: 1,
-      path: "",
-      name: Routes.main_page,
-    },
-    {
-      id: 2,
-      path: "/aboutus",
-      name: Routes.aboutUs,
-    },
-    {
-      id: 3,
-      path: "/services/1",
-      name: Routes.services,
-    },
-    {
-      id: 4,
-      path: "/reviews/all/1",
-      name: Routes.reviews,
-    },
-    {
-      id: 5,
-      path: "/performer",
-      name: Routes.performer,
-    },
-  ];
   return (
         <div className={isHederAndFooter?"root":""}>
           {isHederAndFooter?
@@ -53,20 +26,19 @@ const Page404 = async({isHederAndFooter=true}) => {
             <h1>{Page404.title}</h1>
             <div className="description">{Page404.description}</div>
             <div className="list-pages">
-              {pages.map((page) => (
-                <Link key={page.id} href={'/ua'+page.path}>
+                <Link key={'linktoBack'} href={'/ua'}>
                   <Button
-                    text={page.name}
+                    text={'Повернутися назад'}
                   />
                 </Link>
-              ))}
+            
             </div>
+          </div>
             
             {isHederAndFooter?
               <Footer lang="ua" />
               :
               <></>}
-          </div>
         </div>
   );
 };

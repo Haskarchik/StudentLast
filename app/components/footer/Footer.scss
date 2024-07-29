@@ -4,6 +4,7 @@
   @media (max-width:768px) {
     margin-top: 60px;
   }
+
   position: relative;
   border-top: 2px white solid;
   display: flex;
@@ -11,6 +12,14 @@
   font-family: 'Vollkorn';
   font-weight: 500;
  /*  font-style: italic; */
+
+ .language_switch .ua.active,
+ .language_switch .ru.active {
+   font-weight: bold;
+   text-decoration: underline;
+ }
+ 
+
   .footer-item {
     margin: 2.56rem 0 1rem 0;
     display: flex;
@@ -144,6 +153,7 @@
     align-items: center;
     color: rgb(206, 204, 204);
     font-weight: normal;
+   
     
     .ua{
       margin-right: 20px;
