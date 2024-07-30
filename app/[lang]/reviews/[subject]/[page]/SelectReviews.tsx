@@ -42,7 +42,8 @@ const SelectReviews = ({subjects,reviews,lang,subject,typesOfWorkOptions}:{subje
         defaultValue={lang === "ua" ? "Усі" : "All"}
         InputLabelProps={{
         style: {
-            fontSize: "1rem",
+            fontSize: "1.1rem",
+            fontWeight:'900',
         },
         }}
         onChange={handleTypeOfWorkChange}

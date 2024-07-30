@@ -76,7 +76,7 @@ const SetLanguage = ({ lang }) => {
             borderRadius: "5px",
             borderStyle: "solid",
             borderWidth: "0.1px",
-            borderColor: "white",
+           /*  borderColor: "white", */
           }}
           width={40}
           height={24}
@@ -105,7 +105,7 @@ const SetLanguage = ({ lang }) => {
                 borderRadius: "5px",
                 borderStyle: "solid",
                 borderWidth: "1px",
-                borderColor: "white",
+             /*    borderColor: "white", */
               }}
               alt="flag country"
             />

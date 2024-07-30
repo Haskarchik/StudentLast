@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useState } from "react";
 import "./CostCalculator.scss";
 import { SubmitHandler } from "react-hook-form";
@@ -16,9 +16,19 @@ import Button from "../button/Button";
 import SuccessModal from "../success-modal/SuccessModal";
 import OrderResult from "../order-result/OrderResult";
 import { Locale } from "@/i18n.config";
-import useCalculatorForm, { CalculatorSchema } from "../cost-calculator copy/useCalculatorForm";
+import useCalculatorForm, {
+  CalculatorSchema,
+} from "../cost-calculator copy/useCalculatorForm";
 
-const CostCalculator = ({Home,subjects,lang}:{Home:any,subjects:any,lang:Locale}) => {
+const CostCalculator = ({
+  Home,
+  subjects,
+  lang,
+}: {
+  Home: any;
+  subjects: any;
+  lang: Locale;
+}) => {
   const { handleSubmit, errors, control, watch } = useCalculatorForm();
   const [files, setFiles] = useState<File[]>();
   const uniqueness = watch("uniqueness", 0);
@@ -77,7 +87,7 @@ const CostCalculator = ({Home,subjects,lang}:{Home:any,subjects:any,lang:Locale}
           for (const file of files) {
             const form = new FormData();
             form.append("document", file);
-  
+
             form.append("chat_id", process.env.REACT_APP_CHAT_ID!);
             form.append("reply_to_message_id", result.result.message_id);
             await fetch(
@@ -114,13 +124,21 @@ const CostCalculator = ({Home,subjects,lang}:{Home:any,subjects:any,lang:Locale}
       <div className="work-article">
         <div className="w-100">
           <div>{Home.discipline}</div>
-          <SubjectAutocomplete subjects={subjects} Home={Home} control={control} />
+          <SubjectAutocomplete
+            subjects={subjects}
+            Home={Home}
+            control={control}
+          />
           <ErrorBlock error={errors.subject} />
         </div>
 
         <div className="w-100">
           <div>{Home.type_work}</div>
-          <WorkTypeAutocomplete subjects={subjects} Home={Home} control={control} />
+          <WorkTypeAutocomplete
+            subjects={subjects}
+            Home={Home}
+            control={control}
+          />
           <ErrorBlock error={errors.workType} />
         </div>
       </div>
@@ -142,12 +160,12 @@ const CostCalculator = ({Home,subjects,lang}:{Home:any,subjects:any,lang:Locale}
         <WorkTopicField Home={Home} control={control} />
         <ErrorBlock error={errors.topic} />
       </div>
-      <div className="phone">
+      <div style={{ position: "relative" }} className="phone">
         <PhoneControl
           label={Home.phone_number}
           control={control}
           name={"phone"}
-  />
+        />
         <ErrorBlock error={errors.phone} />
       </div>
       <div className="additional">
@@ -161,26 +179,26 @@ const CostCalculator = ({Home,subjects,lang}:{Home:any,subjects:any,lang:Locale}
           <div className="center-text">{Home.page_count}</div>
           <CustomSlider control={control} name={"pages"} />
 
-            <div className="center-text">
+          <div className="center-text">
             {pages}&nbsp;
             {lang == "ua"
               ? pages == 0
                 ? "сторінок"
                 : pages.toString()[pages.toString().length - 1] == "1"
-                ? "сторінка"
-                : parseInt(pages.toString()[pages.toString().length - 1]) <= 4
-                ? "сторінки"
-                : "сторінок"
+                  ? "сторінка"
+                  : parseInt(pages.toString()[pages.toString().length - 1]) <= 4
+                    ? "сторінки"
+                    : "сторінок"
               : pages == 1
-              ? "page"
-              : "pages"}
+                ? "page"
+                : "pages"}
           </div>
           <ErrorBlock error={errors.pages} />
         </div>
       </div>
       <div className="file-field">
         <FileInput Home={Home} onChange={handleFileChange} />
-</div>
+      </div>
       <div className="additional-requirements">
         <div>{Home.additional_requirements}</div>
         <AdditionalRequirementsField Home={Home} control={control} />
@@ -195,7 +213,7 @@ const CostCalculator = ({Home,subjects,lang}:{Home:any,subjects:any,lang:Locale}
       <SuccessModal open={openSuccessModal} onClose={handleCloseSuccessModal} />
       <div>
         <OrderResult label={"test"} />
-    </div>
+      </div>
     </form>
   );
 };

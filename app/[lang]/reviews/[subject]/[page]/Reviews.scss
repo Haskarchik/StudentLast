@@ -11,7 +11,9 @@
 
 .reviews-typeofwork-select {
   padding: 3rem 0;
-
+  label{
+    font-size: 14px;
+  }
   @include lg {
     width: 300px;
   }

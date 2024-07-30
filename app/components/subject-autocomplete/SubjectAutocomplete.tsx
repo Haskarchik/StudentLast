@@ -1,15 +1,12 @@
-'use client'
+"use client";
 import { SyntheticEvent } from "react";
 import CustomAutocomplete from "../custom-autocomplete/CustomAutocomplete";
-
 
 /*export interface SubjectAutocompleteProps {
   control: Control<CalculatorSchema>;
 }*/
 
-export default function SubjectAutocomplete({
-  control,subjects,Home
-}: any) {
+export default function SubjectAutocomplete({ control, subjects, Home }: any) {
   const subjectsOptions: Array<string> = [
     subjects.management,
     subjects.marketing,

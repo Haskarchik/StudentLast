@@ -167,7 +167,7 @@ body {
   background-size: cover;
   font-family: var(--font-sans);
   background: linear-gradient(to bottom, #A7BED7, #A697E0, #9372E9, #6B69E7);
-  scrollbar-color: #800080 #ffffff; /* Фіолетовий колір ползунку і фону */
+  scrollbar-color: #B3BAEE #ffffff; /* Фіолетовий колір ползунку і фону */
 }
 
 body::-webkit-scrollbar {
@@ -176,12 +176,14 @@ body::-webkit-scrollbar {
 }
 html {
   scroll-behavior: auto;
-  scrollbar-color: #800080 #ffffff; /* Фіолетовий колір ползунку і фону */
+  scrollbar-color: #B3BAEE #ffffff; /* Фіолетовий колір ползунку і фону */
 }
 html::-webkit-scrollbar-thumb {
-  background-color: #800080; /* Фіолетовий колір ползунку */
+  background-color:#B3BAEE; /* Фіолетовий колір ползунку */
 }
-
+.MuiAutocomplete-option  {
+  background-color: #B3BAEE !important;
+}
 @keyframes scroll-up {
   0% {
     transform: translateY(100%);

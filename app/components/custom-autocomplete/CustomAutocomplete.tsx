@@ -1,10 +1,8 @@
-'use client'
+"use client";
 import { Autocomplete, TextField } from "@mui/material";
-import React, { ChangeEvent, SyntheticEvent } from "react";
+import React, { SyntheticEvent } from "react";
 import { Control, Controller } from "react-hook-form";
 import { CalculatorSchema } from "../cost-calculator copy/useCalculatorForm";
-
-type ChangeFunction = (event: SyntheticEvent, value: string) => void;
 
 export interface CustomAutocompleteProps {
   options: string[];
@@ -26,6 +24,7 @@ export default function CustomAutocomplete({
       onChange(value);
     };
   }
+
   return (
     <Controller
       name={name}
@@ -53,6 +52,15 @@ export default function CustomAutocomplete({
               variant="standard"
             />
           )}
+          sx={{
+            
+            "& .MuiAutocomplete-listbox": {
+              backgroundColor: "pink !important", // Зміна кольору заливки попапу на рожевий
+            },
+            "& .MuiAutocomplete-popper": {
+              backgroundColor: "pink !important", // Зміна кольору опцій на рожевий
+            },
+          }}
         />
       )}
     />
