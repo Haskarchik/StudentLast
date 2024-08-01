@@ -3,11 +3,10 @@ import OffersList from "@/app/components/offers-list/OffersList";
 import PriceCalculating from "@/app/components/price-calculating/PriceCalculating";
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
-import SearchWrapper from "./SearchWrapper";
+import Search from "./Search";
 import Pagination from "@/app/components/pagination/Pagination";
 import { Metadata, ResolvingMetadata } from "next";
 import { notFound } from "next/navigation";
-import { SearchProvider} from "./SearchContext";
 
 type Props = {
   params: { lang: Locale };
@@ -39,6 +38,7 @@ export async function generateMetadata(
 export async function generateStaticParams() {
   return [{ page: "1" }, { page: "2" }, { page: "3" }];
 }
+
 const Services = async ({
   params: { lang, page },
 }: {
@@ -231,40 +231,24 @@ const Services = async ({
       experience: 2,
     },
   ];
-  const handleSearchStart = async () => {
-    console.log("Search started");
-    // Інші дії під час початку пошуку
-  };
-
-  const handleSearchEnd = async () => {
-    console.log("Search ended");
-    // Інші дії після завершення пошуку
-  };
- 
   return (
-    <SearchProvider>
-      <div className="wrapper-services">
-        <span className="span-article span-title">{Services.services}</span>
-        <SearchWrapper
-          offersData={offersData}
-          lang={lang}
-          OffersData={OffersData}
-          Services={Services}
-        />
-        <OffersList
-          OffersData={OffersData}
-          lang={lang}
-          data={offersData.slice(pageNumber * 10 - 10, pageNumber * 10)}
-        />
-        <Pagination
-          totalPages={3}
-          showPages={3}
-          currentPage={pageNumber}
-          url={`/${lang}/services/`}
-        />
-        <PriceCalculating lang={lang} />
-      </div>
-    </SearchProvider>
+    <div className="wrapper-services">
+      <span className="span-article span-title">{Services.services}</span>
+      <Search
+        offersData={offersData}
+        lang={lang}
+        OffersData={OffersData}
+        Services={Services}
+        pageNumber={pageNumber}
+      />
+      <Pagination
+        totalPages={3}
+        showPages={3}
+        currentPage={pageNumber}
+        url={`/${lang}/services/`}
+      />
+      <PriceCalculating lang={lang} />
+    </div>
   );
 };
 

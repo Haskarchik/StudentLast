@@ -40,7 +40,6 @@
       color: black;
       transition-duration: 0.3s;
       @include lg {
-        text-align: initial;
         font-size: 24px;
       }
     }

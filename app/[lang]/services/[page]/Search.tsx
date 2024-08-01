@@ -1,23 +1,40 @@
-'use client';
-import Image from 'next/image';
-import React, { ChangeEvent } from 'react';
+"use client";
+import Image from "next/image";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import "../Services.scss";
-import { Offer } from '@/app/components/offers-list/OfferData';
-import OffersList from '@/app/components/offers-list/OffersList';
-import { Locale } from '@/i18n.config';
-import PageNotFound from '@/app/components/page-not-found/PageNotFound';
+import { Offer } from "@/app/components/offers-list/OfferData";
+import OffersList from "@/app/components/offers-list/OffersList";
+import { Locale } from "@/i18n.config";
+import PageNotFound from "@/app/components/page-not-found/PageNotFound";
 
 type Props = {
   Services: any;
   OffersData: any;
   lang: Locale;
   offersData: Offer[];
-  searchText: string;
-  filteredData: Offer[];
-  onSearchChange: (e: ChangeEvent<HTMLInputElement>) => void;
-}
+  pageNumber: number;
+};
 
-const Search = ({ Services, OffersData, lang, offersData, searchText, filteredData, onSearchChange }: Props) => {
+const Search = ({
+  Services,
+  OffersData,
+  lang,
+  offersData,
+  pageNumber,
+}: Props) => {
+  const [searchText, setSearchText] = useState<string>("");
+  const [data, setData] = useState<Offer[]>([]);
+  function handleSearchChange(e: ChangeEvent<HTMLInputElement>) {
+    setSearchText(e.target.value);
+  }
+  useEffect(() => {
+    setData(
+      offersData.filter((x) =>
+        x.workName.toLocaleLowerCase().includes(searchText.toLocaleLowerCase())
+      )
+    );
+  }, [searchText]);
+
   return (
     <>
       <div className="search-item">
@@ -29,23 +46,34 @@ const Search = ({ Services, OffersData, lang, offersData, searchText, filteredDa
             type="text"
             placeholder={Services.name_services}
             className="find-input"
-            onChange={onSearchChange}
-            value={searchText}
+            onChange={handleSearchChange}
           />
           <div className={"find-loop-mark-wrapper"}>
-            <Image src={"/review-photos/LoopMark.svg"} width={20} height={20} alt="find loop" className="find-loop-mark" />
+            <Image
+              src={"/review-photos/LoopMark.svg"}
+              width={20}
+              height={20}
+              alt="find loop"
+              className="find-loop-mark"
+            />
           </div>
         </div>
       </div>
-      {searchText === "" ? <></>
-        :
-        filteredData.length === 0 ?
-          <PageNotFound notFound={Services['not-found']} />
-          :
-          <OffersList OffersData={OffersData} data={filteredData} lang={lang} />
-      }
+      {searchText === "" ? (
+        <>
+          <OffersList
+            OffersData={OffersData}
+            lang={lang}
+            data={offersData.slice(pageNumber * 10 - 10, pageNumber * 10)}
+          />
+        </>
+      ) : data.length === 0 ? (
+        <PageNotFound notFound={Services["not-found"]} />
+      ) : (
+        <OffersList OffersData={OffersData} data={data} lang={lang} />
+      )}
     </>
-  )
-}
+  );
+};
 
 export default Search;

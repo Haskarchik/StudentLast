@@ -1,0 +1,64 @@
+// components/ReviewsCard.tsx
+
+"use client";
+
+import React, { FC, useEffect, useState } from "react";
+import "./ReviewsCard.scss";
+import ReviewsCardItem from "./ReviewsCardItem";
+import WhiteNavigateButton from "../white-navigate-button/WhiteNavigateButton";
+import { chekVisible } from "../visible-cheker/isVisible";
+
+interface ReviewsCardProps {
+  AboutUs: {
+    our_reviews: string;
+    customers: string;
+    all_comment: string;
+  };
+  reviewsData: Array<{
+    id: number;
+    photo: string;
+    userName: string;
+    text: string;
+    typeOfWork: string;
+    date: number;
+  }>;
+}
+
+const ReviewsCardClient: FC<ReviewsCardProps> = ({ AboutUs, reviewsData }) => {
+
+
+ 
+  return (
+    <div className="reviewsCard-wrapper">
+      <span className="span-sub-article span-title">
+        {AboutUs.our_reviews} <br />
+        {AboutUs.customers}
+      </span>
+      <div className="reviewsCard-right">
+        <div
+          className="map-wrapper"
+          style={chekVisible('.reviewsCard-wrapper') ? { animationPlayState: "running" } : {}}
+        >
+          {reviewsData.map((reviewer) => (
+            <ReviewsCardItem
+              key={reviewer.id}
+              id={reviewer.id}
+              userName={reviewer.userName}
+              images={reviewer.photo}
+              text={reviewer.text}
+              stars={5}
+            />
+          ))}
+        </div>
+        <div className="button-wrapper">
+          <WhiteNavigateButton
+            content={AboutUs.all_comment}
+            to={`/reviews/all/1`}
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ReviewsCardClient;

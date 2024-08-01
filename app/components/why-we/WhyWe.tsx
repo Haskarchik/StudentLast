@@ -1,26 +1,32 @@
-import React, { useEffect } from "react";
+// components/WhyWe.tsx
+
+"use client";
+
+import React, { FC,  } from "react";
 import "./WhyWe.scss";
-import { Locale } from "@/i18n.config";
-import { getDictionary } from "@/lib/dictionary";
+import { chekVisible } from "../visible-cheker/isVisible";
 
 interface DataItem {
   text: string;
 }
 
-interface DataListProps {
+interface WhyWeProps {
   data: DataItem[];
-  lang:Locale
+  AboutUs: { why_us: string };
 }
 
-const WhyWe =async ({ data,lang }: DataListProps) => {
-  const {AboutUs}=await getDictionary(lang);
+const WhyWe: FC<WhyWeProps> = ({ data, AboutUs }) => {
+
   return (
     <div className="wrapper-why">
       <span className="span-sub-article span-title">{AboutUs.why_us}</span>
       <ul className="why-item">
-        {data.map((text, index) => (
-          <li key={index}>
-            <p>{text.text}</p>
+        {data.map((item, index) => (
+          <li
+            key={index}
+            style={chekVisible('.wrapper-why') ? { animationPlayState: "running" } : {}}
+          >
+            <p>{item.text}</p>
           </li>
         ))}
       </ul>

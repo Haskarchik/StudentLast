@@ -1,5 +1,5 @@
 {
-  "Home": {
+"Home": {
     "student_work_for_order": "Студентські роботи на замовлення",
     "student_work_for_order_description": "Дипломні, курсові, реферати, індивідуальні завдання та есе на замовлення - основна наша спеціалізація. Безкоштовно включаємо правки, звіти про унікальність, презентації та промови для успішного захисту робіт.",
     "Calculation": "Розрахунок",
@@ -587,8 +587,8 @@
   "subjects": {
     "ElectronicCircuits": "Електронні схеми",
     "GeneralAndInorganicChemistry": "Загальна та неорганічна хімія",
-    "PublicHealth": "громадське здоров'я",
-    "LaborProtectionAndSafety": "Охорона Праці І Безпека",
+    "PublicHealth": "Громадське здоров'я",
+    "LaborProtectionAndSafety": "Охорона Праці і Безпека",
     "management": "Менеджмент",
     "marketing": "Маркетинг",
     "restaurant_business": "Ресторанний бізнес",
@@ -709,7 +709,7 @@
     "computer_graphics": "Комп’ютерна графіка",
     "constitutional_law": "Конституційне право",
     "conflictology": "Конфліктологія",
-    "corporate_law": "Короративне право",
+    "corporate_law": "Корпоративне право",
     "local_history": "Краєзнавство",
     "autocad_drawing": "Креслення в AutoCad",
     "drawing_SolidWorks": "Креслення в SolidWorks",
@@ -993,7 +993,7 @@
     "Biology": "Біологія",
     "Ecology": "Екологія",
     "Chemistry": "Хімія",
-    "Earth_sciences": "Науки про Землю*",
+    "Earth_sciences": "Науки про Землю",
     "Physics_and_astronomy": "Фізика та астрономія",
     "Applied_physics_and_nanomaterials": "Прикладна фізика та наноматеріали",
     "Geography": "Географія",
@@ -1065,7 +1065,7 @@
     "Military_management_by_types_of_armed_forces": "Військове управління (за видами збройних сил)",
     "Troops_services": "Забезпечення військ (сил)",
     "Armament_and_military_technology": "Озброєння та військова техніка",
-    "National_security_by_individual_security_areas_and_types_of_activity": "Національна безпека (за окремими сферами забезпечення і видами діяльності)**",
+    "National_security_by_individual_security_areas_and_types_of_activity": "Національна безпека (за окремими сферами забезпечення і видами діяльності)",
     "Fire_safety": "Пожежна безпека",
     "Law_enforcement_activity": "Правоохоронна діяльність",
     "Civil_security": "Цивільна безпека",

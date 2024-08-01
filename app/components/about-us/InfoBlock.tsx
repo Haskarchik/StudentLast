@@ -1,14 +1,33 @@
-import React, { FC } from "react";
+// components/InfoBlock.tsx
+
+import React from "react";
 import "./InfoBlock.scss";
 
 type Props = {
+  id: string;
   fake?: boolean;
   numberInfo?: string;
   text?: string;
+  isVisible: boolean;
 };
-const InfoBlock: FC<Props> = ({ numberInfo, text, fake }) => {
+
+const InfoBlock: React.FC<Props> = ({
+  id,
+  numberInfo,
+  text,
+  fake,
+  isVisible,
+}) => {
   return (
-    <div className="wrapper-block" style={{ ...(fake && { display: "none" }) }}>
+    <div
+      className="wrapper-block"
+      id={id}
+      style={
+        fake
+          ? { display: "none" }
+          : { ...(isVisible && { animationPlayState: "running" }) }
+      }
+    >
       <div className="block-item">
         <p>{text}</p>
         <div className="center-span">
@@ -16,8 +35,6 @@ const InfoBlock: FC<Props> = ({ numberInfo, text, fake }) => {
         </div>
       </div>
     </div>
-
   );
 };
-
 export default InfoBlock;

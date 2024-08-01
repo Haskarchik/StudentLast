@@ -184,6 +184,24 @@ html::-webkit-scrollbar-thumb {
 .MuiAutocomplete-option  {
   background-color: #B3BAEE !important;
 }
+.MuiList-root{
+  background-color: #B3BAEE !important;
+  border-radius: 5px;
+
+}
+.MuiList-root{
+  background-color: #B3BAEE !important;
+
+}
+.MuiPopper-root{
+  background-color: #B3BAEE !important;
+  border-radius: 5px;
+
+}/* .MuiPaper-root{
+  background-color: #B3BAEE !important;
+  border-radius: 5px;
+
+} */
 @keyframes scroll-up {
   0% {
     transform: translateY(100%);

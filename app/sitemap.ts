@@ -12,7 +12,7 @@ export default async function sitemap() {
   }))
 
   const sitemapIdBlogEN=dataIdBlog.res.map((x:{id:number})=>({
-    url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/selectblog/"+x.id,
+    url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/selectblog/"+x.id,
     lastModified: new Date()
   }))
 
@@ -28,7 +28,7 @@ export default async function sitemap() {
   }))
 
   const resBlogEN=Array(blogCountPages).fill(undefined).map((_, idx)=>({
-    url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/blog/"+(idx+1),
+    url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/blog/"+(idx+1),
     lastModified: new Date()
   }))
 
@@ -75,7 +75,7 @@ export default async function sitemap() {
 
   const allPageEN=Array(31).fill(undefined).map((_, idx)=>(
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/reviews/all/"+(idx+1),
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/reviews/all/"+(idx+1),
       lastModified: new Date()
     }
   ));
@@ -87,7 +87,7 @@ export default async function sitemap() {
   ));
   const subjectPageEN=subjects.map(x=>(
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+`/en/reviews/${x.subject}/1`,
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+`/ru/reviews/${x.subject}/1`,
       lastModified: new Date()
     }
   ));
@@ -97,7 +97,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru",
       lastModified: new Date()
     },
     {
@@ -105,7 +105,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/services/1",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/services/1",
       lastModified: new Date()
     },
     {
@@ -113,7 +113,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/services/2",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/services/2",
       lastModified: new Date()
     },
     {
@@ -121,7 +121,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/services/3",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/services/3",
       lastModified: new Date()
     },
     {
@@ -129,7 +129,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/aboutus",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/aboutus",
       lastModified: new Date()
     },
     {
@@ -137,7 +137,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/academicdictionary",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/academicdictionary",
       lastModified: new Date()
     },
     {
@@ -145,7 +145,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/performer",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/performer",
       lastModified: new Date()
     },
     {
@@ -153,7 +153,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/1",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/1",
       lastModified: new Date()
     },
     {
@@ -161,7 +161,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/2",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/2",
       lastModified: new Date()
     },
     {
@@ -169,7 +169,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/3",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/3",
       lastModified: new Date()
     },
     {
@@ -177,7 +177,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/4",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/4",
       lastModified: new Date()
     },
     {
@@ -185,7 +185,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/5",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/5",
       lastModified: new Date()
     },
     {
@@ -193,7 +193,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/6",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/6",
       lastModified: new Date()
     },
     {
@@ -201,7 +201,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/7",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/7",
       lastModified: new Date()
     },
     {
@@ -209,7 +209,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/8",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/8",
       lastModified: new Date()
     },
     {
@@ -217,7 +217,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/9",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/9",
       lastModified: new Date()
     },
     {
@@ -225,7 +225,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/10",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/10",
       lastModified: new Date()
     },
     {
@@ -233,7 +233,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/11",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/11",
       lastModified: new Date()
     },
     {
@@ -241,7 +241,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/12",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/12",
       lastModified: new Date()
     },
     {
@@ -249,7 +249,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/13",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/13",
       lastModified: new Date()
     },
     {
@@ -257,7 +257,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/14",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/14",
       lastModified: new Date()
     },
     {
@@ -265,7 +265,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/15",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/15",
       lastModified: new Date()
     },
     {
@@ -273,7 +273,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/16",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/16",
       lastModified: new Date()
     },
     {
@@ -281,7 +281,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/17",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/17",
       lastModified: new Date()
     },
     {
@@ -289,7 +289,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/18",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/18",
       lastModified: new Date()
     },
     {
@@ -297,7 +297,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/19",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/19",
       lastModified: new Date()
     },
     {
@@ -305,7 +305,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/20",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/20",
       lastModified: new Date()
     },
     {
@@ -313,7 +313,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/21",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/21",
       lastModified: new Date()
     },
     {
@@ -321,7 +321,7 @@ export default async function sitemap() {
       lastModified: new Date()
     },
     {
-      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/en/worktype/22",
+      url: (process.env.NEXT_PUBLIC_URL||"https://student-helper.com")+"/ru/worktype/22",
       lastModified: new Date()
     },
     ...allPageUA,...allPageEN,...subjectPageUA,...subjectPageEN,...resBlogUA,...resBlogEN,

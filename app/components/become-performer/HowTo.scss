@@ -14,12 +14,8 @@
 
     @include lg {
       flex-direction: row;
-      &:hover{
-        .wrapper-block{
-
-        animation-play-state: running;
-      }
-      }
+     
+      
       gap: 0;
     }
     .info-block-items-wrapper {
@@ -27,7 +23,7 @@
       justify-content: center;
 
       @include lg {
-        width: 50%;
+        width: 45%;
         justify-content: start;
 
       }

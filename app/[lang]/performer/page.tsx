@@ -5,11 +5,11 @@ import WhyWe from "@/app/components/why-we/WhyWe";
 import { professions } from "@/app/data/professions";
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
-import { Metadata, ResolvingMetadata } from 'next'
- 
+import { Metadata, ResolvingMetadata } from "next";
+
 type Props = {
-  params: { lang: Locale }
-}
+  params: { lang: Locale };
+};
 
 export async function generateMetadata(
   { params }: Props,
@@ -34,9 +34,13 @@ export async function generateMetadata(
       };
 }
 
-
-const Performer =async ({params:{lang}}:{params:{lang:Locale}}) => {
-    const {Performer,subjects,professions}=await getDictionary(lang);
+const Performer = async ({
+  params: { lang },
+}: {
+  params: { lang: Locale };
+}) => {
+  const { Performer, subjects, professions, AboutUs } =
+    await getDictionary(lang);
   const text = Performer.description;
   const PerformerData = [
     {
@@ -379,7 +383,7 @@ const Performer =async ({params:{lang}}:{params:{lang:Locale}}) => {
     subjects.metallurgy_of_nonferrous_metals,
     subjects.metaphysics_ontology,
     subjects.teaching_methodology,
-    subjects.metrology,
+    /* subjects.metrology, */
     subjects.construction_mechanization,
     subjects.mechanics,
     subjects.solid_medium_mechanics,
@@ -492,7 +496,7 @@ const Performer =async ({params:{lang}}:{params:{lang:Locale}}) => {
     subjects.SocialStatistics,
     subjects.SocioCulturalActivities,
     subjects.Sociolinguistics,
-    subjects.Sociology,
+    /*  subjects.Sociology, */
     subjects.MediaSociology,
     subjects.KnowledgeSociology,
     subjects.CommunicationSociology,
@@ -519,10 +523,10 @@ const Performer =async ({params:{lang}}:{params:{lang:Locale}}) => {
     subjects["TOE"],
     subjects.Topography,
     subjects.Topology,
-    subjects.Transport,
+    /* subjects.Transport, */
     subjects.EmploymentLaw,
-    subjects.UkrainianLanguage,
-    subjects.UkrainianLiterature,
+    /* subjects.UkrainianLanguage, */
+    /* subjects.UkrainianLiterature, */
     subjects.PersonnelManagement,
     subjects.RiskManagement,
     subjects.QualityManagement,
@@ -530,7 +534,7 @@ const Performer =async ({params:{lang}}:{params:{lang:Locale}}) => {
     subjects.Philosophy,
     subjects.Physiology,
     subjects.PhilosophyOfLaw,
-    subjects.Finance,
+    /* subjects.Finance, */
     subjects.FinancialMathematics,
     subjects.FinancialLaw,
     subjects.FinancialManagement,
@@ -553,9 +557,14 @@ const Performer =async ({params:{lang}}:{params:{lang:Locale}}) => {
         buttonText={Performer.become_performer}
         article={Performer.become_performer}
       />
-      <WhyWe lang={lang} data={PerformerData} />
-      <BecomeAPerformer lang={lang} />
-      <PerformerForm typesOfWorkOptions={typesOfWorkOptions} subjectsOptions={subjectsOptions} profession={profession}  Performer={Performer} />
+      <WhyWe data={PerformerData} AboutUs={AboutUs} />;
+      <BecomeAPerformer Performer={Performer} />;
+      <PerformerForm
+        typesOfWorkOptions={typesOfWorkOptions}
+        subjectsOptions={subjectsOptions}
+        profession={profession}
+        Performer={Performer}
+      />
     </div>
   );
 };

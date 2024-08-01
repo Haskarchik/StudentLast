@@ -1,22 +1,22 @@
-'use client'
-import React from 'react'
-import WhiteButton from '../button/WhiteButton';
+"use client";
+import React from "react";
+import WhiteButton from "../button/WhiteButton";
+import Link from "next/link";
+import { Locale } from "@/i18n.config";
 
 type Props = {
-    order_work:string
-}
+  order_work: string;
+  lang:Locale
+};
 
 const ButtonOrderAdvance = (props: Props) => {
-  function scrollToForm() {
-    const element = document.getElementById('cost-calculation');
-
-    element?.scrollIntoView({ behavior: 'smooth' });
-  }
   return (
-    <div className={'button-wrapper'}>
-        <WhiteButton text={props.order_work} onClick={scrollToForm}/>
+    <div className={"button-wrapper"}>
+      <Link href={`/${props.lang}/contact`}>
+        <WhiteButton text={props.order_work}  />
+      </Link>
     </div>
-  )
-}
+  );
+};
 
-export default ButtonOrderAdvance
+export default ButtonOrderAdvance;

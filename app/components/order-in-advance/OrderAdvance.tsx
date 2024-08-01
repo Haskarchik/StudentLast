@@ -26,7 +26,7 @@ const OrderAdvance =async ({ className, lang }: OrderAdvanceProps) => {
             {AboutUs.advance_description}
           </p>
         </span>
-        <ButtonOrderAdvance order_work={AboutUs.order_work}/>
+        <ButtonOrderAdvance order_work={AboutUs.order_work} lang={lang}/>
       </div>
     </div>
   );

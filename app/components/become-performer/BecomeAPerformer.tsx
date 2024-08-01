@@ -1,11 +1,24 @@
-import React from "react";
+// components/BecomeAPerformer.tsx
+
+"use client";
+
+import React, { FC, } from "react";
 import "./HowTo.scss";
 import InfoBlock from "../about-us/InfoBlock";
-import { Locale } from "@/i18n.config";
-import { getDictionary } from "@/lib/dictionary";
+import { chekVisible } from "../visible-cheker/isVisible";
 
-const BecomeAPerformer = async({lang}:{lang:Locale}) => {
-  const {Performer}=await getDictionary(lang);
+interface PerformerProps {
+  Performer: {
+    how_become: string;
+    executor: string;
+    fill_form: string;
+    review_application: string;
+    waiting_feedback: string;
+    you_team: string;
+  };
+}
+
+const BecomeAPerformer: FC<PerformerProps> = ({ Performer }) => {
   return (
     <div className="wrapper-how-to">
       <div className="how-to-item">
@@ -15,13 +28,30 @@ const BecomeAPerformer = async({lang}:{lang:Locale}) => {
         </span>
         <div className="info-block-items-wrapper">
           <div className="info-block-items">
-            <InfoBlock numberInfo="01" text={Performer.fill_form} />
             <InfoBlock
+              id={Performer.fill_form}
+              numberInfo="01"
+              text={Performer.fill_form}
+              isVisible={chekVisible(".how-to-item")}
+            />
+            <InfoBlock
+              id={Performer.review_application}
               numberInfo="02"
               text={Performer.review_application}
+              isVisible={chekVisible(".how-to-item")}
             />
-            <InfoBlock numberInfo="03" text={Performer.waiting_feedback} />
-            <InfoBlock numberInfo="04" text={Performer.you_team} />
+            <InfoBlock
+              id={Performer.waiting_feedback}
+              numberInfo="03"
+              text={Performer.waiting_feedback}
+              isVisible={chekVisible(".how-to-item")}
+            />
+            <InfoBlock
+              id={Performer.you_team}
+              numberInfo="04"
+              text={Performer.you_team}
+              isVisible={chekVisible(".how-to-item")}
+            />
           </div>
         </div>
       </div>

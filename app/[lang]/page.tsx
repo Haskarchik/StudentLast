@@ -1,48 +1,49 @@
-import { Locale } from '@/i18n.config'
-import { getDictionary } from '@/lib/dictionary'
-import HeaderSample from '../components/article-sample/HeaderSample';
-import PriceCalculating from "../components/price-calculating/PriceCalculating"
-import WorkTypeList from '../components/work-type-list/WorkTypeList';
-import AboutUsComponent from '../components/about-us/AboutUsComponent';
-import WhyWe from '../components/why-we/WhyWe';
-import WorkProcess from '../components/work-process/WorkProcess';
-import ReviewsCard from '../components/reviews/ReviewsCard';
-import JoinOurTeam from '../components/join-in-our-team/JoinOurTeam';
-import OrderAdvance from '../components/order-in-advance/OrderAdvance';
-import { Metadata, ResolvingMetadata } from 'next'
- 
+import { Locale } from "@/i18n.config";
+import { getDictionary } from "@/lib/dictionary";
+import HeaderSample from "../components/article-sample/HeaderSample";
+import PriceCalculating from "../components/price-calculating/PriceCalculating";
+import WorkTypeList from "../components/work-type-list/WorkTypeList";
+import AboutUsPage from "../components/about-us/about-us";
+import WhyWe from "../components/why-we/WhyWe";
+import WorkProcess from "../components/work-process/WorkProcess";
+import ReviewsCard from "../components/reviews/ReviewsCard";
+import JoinOurTeam from "../components/join-in-our-team/JoinOurTeam";
+import OrderAdvance from "../components/order-in-advance/OrderAdvance";
+import { Metadata, ResolvingMetadata } from "next";
+
 type Props = {
-  params: { lang: Locale }
-}
- 
+  params: { lang: Locale };
+};
+
 export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  return params.lang=="ua"?
-      {
-        title:"Головна",
-        description: 'Студентські роботи на замовлення від кращих авторів компанії «Student Helper!» Сайт професійної допомоги студентам щодо вирішення студентських завдань.',
-        robots: 'index, follow',
-        keywords:"купити, замовити, курсову, дипломну, контрольну, лабораторну, математику, англійську"
+  return params.lang == "ua"
+    ? {
+        title: "Головна",
+        description:
+          "Студентські роботи на замовлення від кращих авторів компанії «Student Helper!» Сайт професійної допомоги студентам щодо вирішення студентських завдань.",
+        robots: "index, follow",
+        keywords:
+          "купити, замовити, курсову, дипломну, контрольну, лабораторну, математику, англійську",
       }
-    :
-      {
-        title:"Main",
-        description: 'Student works to order from the best authors of the company "Student Helper!" A site for professional assistance to students in solving student tasks.',
-        robots: 'index, follow',
-        keywords: "buy, order, course, diploma, control, laboratory, mathematics, English",
-      }
+    : {
+        title: "Main",
+        description:
+          'Student works to order from the best authors of the company "Student Helper!" A site for professional assistance to students in solving student tasks.',
+        robots: "index, follow",
+        keywords:
+          "buy, order, course, diploma, control, laboratory, mathematics, English",
+      };
 }
 
-
-
 export default async function Home({
-  params: { lang }
+  params: { lang },
 }: {
-  params: { lang: Locale }
+  params: { lang: Locale };
 }) {
-  const { Home, OffersData, AboutUs } = await getDictionary(lang)
+  const { Home, OffersData, AboutUs } = await getDictionary(lang);
 
   const WhyWeData = [
     {
@@ -58,6 +59,7 @@ export default async function Home({
       text: Home.reliability,
     },
   ];
+
   const hArticle = Home.student_work_for_order;
   const pText = Home.student_work_for_order_description;
   const defaultWorkType = Home.order_work;
@@ -109,13 +111,17 @@ export default async function Home({
         buttonText={defaultWorkType}
       />
       <PriceCalculating lang={lang} />
-      <WorkTypeList lang={lang} workTypes={offersData} title={Home.our_services} />
-      <AboutUsComponent lang={lang} article={Home.about_us} />
-      <WhyWe lang={lang} data={WhyWeData} />
-      <WorkProcess lang={lang} />
-      <ReviewsCard lang={lang} type={Home.coursework} />
+      <WorkTypeList
+        lang={lang}
+        workTypes={offersData}
+        title={Home.our_services}
+      />
+      <AboutUsPage article={Home.about_us} AboutUs={AboutUs}/>
+      {/* <WhyWe lang={lang} data={WhyWeData} /> */}
+      <WorkProcess AboutUs={AboutUs} lang={lang} left={false} />
+      <ReviewsCard lang={lang} type={Home.coursework}  />
       <JoinOurTeam lang={lang} />
-      <OrderAdvance lang={lang}/>
+      <OrderAdvance lang={lang} />
     </div>
-  )
+  );
 }

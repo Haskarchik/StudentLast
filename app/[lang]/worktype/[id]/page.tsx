@@ -113,7 +113,8 @@ export async function generateStaticParams() {
 }
 
 const WorkType = async ({ params: { id, lang } }: Props) => {
-  const { OffersData, Work_type, Home } = await getDictionary(lang);
+  const { OffersData, Work_type, Home, AboutUs, Performer } =
+    await getDictionary(lang);
   const offersData: typeOffersData[] = getOfferData(OffersData);
   const offer = offersData.find((x) => x.id == id);
   if (offer == undefined) notFound();
@@ -154,8 +155,8 @@ const WorkType = async ({ params: { id, lang } }: Props) => {
       }
       <div className="order-button"></div>
       <PriceCalculating lang={lang} ref1={null} />
-      <HowToOrder lang={lang} />
-      <WorkProcess lang={lang} />
+      <HowToOrder Performer={Performer} />;
+      <WorkProcess AboutUs={AboutUs} lang={lang} left={true} />
       <ReviewsCard lang={lang} type={offer.workName} />
       <WorkTypeList
         lang={lang}

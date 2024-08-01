@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
-export type Language = "ua" | "en";
+export type Language = "ua" | "ru";
 
 interface ILanguageContext {
   language: string;

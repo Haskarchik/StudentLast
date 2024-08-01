@@ -6,7 +6,7 @@ import { FaInstagram, FaTelegramPlane, FaTiktok } from "react-icons/fa";
 import { Locale } from "@/i18n.config";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "../../../public/logo.svg";
+import logo from "../../../public/logo_white.svg";
 import { useRouter } from "next/navigation";
 
 const FooterClient = ({

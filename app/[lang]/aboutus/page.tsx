@@ -7,6 +7,7 @@ import WorkProcess from "@/app/components/work-process/WorkProcess";
 import JoinOurTeam from "@/app/components/join-in-our-team/JoinOurTeam";
 import OrderAdvance from "@/app/components/order-in-advance/OrderAdvance";
 import { Metadata, ResolvingMetadata } from 'next'
+import AboutUsPage from "@/app/components/about-us/about-us";
  
 type Props = {
   params: { lang: Locale }
@@ -53,11 +54,11 @@ const AboutUs =async ({params:{lang}}:{params:{lang:Locale}}) => {
   return (
     <div className="wrapper-aboutUs">
       <span className="span-article span-title">{AboutUs.about_us}</span>
-      <AboutUsComponent lang={lang} article={AboutUs.who_are_we} />
+      <AboutUsPage article={Home.about_us} AboutUs={AboutUs}/>
       <div className={"why-we-wrapper"}>
-        <WhyWe lang={lang} data={WhyWeData} />
+      <WhyWe data={WhyWeData} AboutUs={AboutUs} />;
       </div>
-      <WorkProcess lang={lang} />
+      <WorkProcess AboutUs={AboutUs} lang={lang} left={true} />
       <JoinOurTeam lang={lang} />
       <OrderAdvance lang={lang} />
     </div>

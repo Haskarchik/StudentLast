@@ -31,6 +31,7 @@ export default function TermPicker({ control }: TermPickerProps) {
         min={new Date().toISOString().split("T")[0]}
         value={currentDate}
         onChange={handleDateChange}
+       
       />
     </div>
   );

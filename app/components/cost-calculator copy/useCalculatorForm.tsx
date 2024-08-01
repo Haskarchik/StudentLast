@@ -5,8 +5,8 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 const calculatorSchema = object({
-  subject: yup.string().required('Виберіть дисципліну або напишіть свою особисту'),
-  workType: yup.string().required('Виберіть вид роботи або напишіть інший'),
+  subject: yup.string().required('Вкажіть дисципліну'),
+  workType: yup.string().required('Вкажіть вид роботи'),
   email: yup
     .string()
     .email('E-mail, який Ви написали не схожий на E-mail')
@@ -27,6 +27,9 @@ const calculatorSchema = object({
     }),
   
 });
+
+
+
 
 export type CalculatorSchema = InferType<typeof calculatorSchema>;
 

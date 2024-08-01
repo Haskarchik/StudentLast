@@ -21,7 +21,7 @@ export default function RootLayout({
   params: { lang: Locale };
 }) {
   return (
-    <html lang={params.lang == "ua" ? "uk" : "en"}>
+    <html lang={params.lang == "ua" ? "uk" : "ru"}>
       <body className={inter.className}>
         <div className="root">
           <header>
