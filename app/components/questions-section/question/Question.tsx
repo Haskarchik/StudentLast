@@ -19,7 +19,7 @@ export default function Question({ question, answer }: QuestionProps) {
         <Typography className="question-title">{question}</Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <Typography sx={{ color: 'var(--dull-grey)' }}>{answer}</Typography>
+        <Typography /* sx={{ color: 'var(--dull-grey)' }} */>{answer}</Typography>
       </AccordionDetails>
     </Accordion>
   );

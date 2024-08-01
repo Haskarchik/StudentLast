@@ -240,13 +240,9 @@ const Services = async ({
         OffersData={OffersData}
         Services={Services}
         pageNumber={pageNumber}
+       
       />
-      <Pagination
-        totalPages={3}
-        showPages={3}
-        currentPage={pageNumber}
-        url={`/${lang}/services/`}
-      />
+    
       <PriceCalculating lang={lang} />
     </div>
   );

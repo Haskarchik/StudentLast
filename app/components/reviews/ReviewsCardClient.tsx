@@ -37,7 +37,7 @@ const ReviewsCardClient: FC<ReviewsCardProps> = ({ AboutUs, reviewsData }) => {
       <div className="reviewsCard-right">
         <div
           className="map-wrapper"
-          style={chekVisible('.reviewsCard-wrapper') ? { animationPlayState: "running" } : {}}
+          style={chekVisible('.cardItem-wrapper') ? { animationPlayState: "running" } : {}}
         >
           {reviewsData.map((reviewer) => (
             <ReviewsCardItem

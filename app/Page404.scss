@@ -2,7 +2,7 @@
   margin: 100px 0px;
   @media (max-width: 768px) {
     margin: 50px 0px;
-}
+  }
   h1 {
     white-space: pre-wrap;
     font-family: "Abhaya Libre SemiBold", sans-serif;
@@ -32,12 +32,15 @@
     button {
       margin-top: 10px;
       width: 250px;
-      background: #303a45; 
-       @media (max-width:728px) {
-      width: 200px;
+      background: #6b69e7;
+  border-radius: 0px;
+  margin-left: 0px;
+
+      @media (max-width: 728px) {
+        width: 200px;
 
         font-size: 14px;
-    }
+      }
     }
   }
 }

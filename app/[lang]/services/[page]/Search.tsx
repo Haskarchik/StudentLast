@@ -6,6 +6,7 @@ import { Offer } from "@/app/components/offers-list/OfferData";
 import OffersList from "@/app/components/offers-list/OffersList";
 import { Locale } from "@/i18n.config";
 import PageNotFound from "@/app/components/page-not-found/PageNotFound";
+import Pagination from "@/app/components/pagination/Pagination";
 
 type Props = {
   Services: any;
@@ -65,6 +66,12 @@ const Search = ({
             OffersData={OffersData}
             lang={lang}
             data={offersData.slice(pageNumber * 10 - 10, pageNumber * 10)}
+          />
+          <Pagination
+            totalPages={3}
+            showPages={3}
+            currentPage={pageNumber}
+            url={`/${lang}/services/`}
           />
         </>
       ) : data.length === 0 ? (

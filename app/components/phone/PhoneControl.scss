@@ -13,6 +13,16 @@
 .phone-container {
   display: flex;
   align-items: center;
+  position: relative;
+  &::after{
+    content: '';
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    background-color: white;
+  }
   .phone-dropdown {
     width: 8%;
     border-bottom: 1px solid var(--white);

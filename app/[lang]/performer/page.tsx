@@ -557,8 +557,8 @@ const Performer = async ({
         buttonText={Performer.become_performer}
         article={Performer.become_performer}
       />
-      <WhyWe data={PerformerData} AboutUs={AboutUs} />;
-      <BecomeAPerformer Performer={Performer} />;
+      <WhyWe data={PerformerData} AboutUs={AboutUs} />
+      <BecomeAPerformer Performer={Performer} />
       <PerformerForm
         typesOfWorkOptions={typesOfWorkOptions}
         subjectsOptions={subjectsOptions}
