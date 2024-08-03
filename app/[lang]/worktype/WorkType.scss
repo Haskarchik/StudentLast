@@ -55,4 +55,8 @@
     justify-content: start;
   }
 }
-.work-description{}
+.work-description{
+  .work-description-desc {
+    max-width: 480px;
+  }
+}

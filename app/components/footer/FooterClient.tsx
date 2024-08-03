@@ -66,7 +66,8 @@ const FooterClient = ({
               currentLang == "ru"
                 ? { cursor: "default" }
                 : { cursor: "pointer" }
-            }>
+            }
+          >
             Російська
           </div>
         </div>
@@ -148,6 +149,11 @@ const FooterClient = ({
           {currentLang === "ua"
             ? "Student Helper - Всі права захищені."
             : "Student Helper - Все права защищены."}
+        </div>
+        <div className="politic">
+          <Link href={`/${lang}/oferta`}>Договір Публічної Оферти</Link>
+          <Link href={`/${lang}/cookie`}>Cookie</Link>
+          <Link href={`/${lang}/political`}>Політика Конфіденційності</Link>
         </div>
       </div>
     </div>

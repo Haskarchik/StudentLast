@@ -66,8 +66,8 @@ export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const { OffersData, AboutUs } = await getDictionary(params.lang);
-  const offersData = getOfferData(OffersData);
+  const { OffersData, OffersDataDesc,AboutUs } = await getDictionary(params.lang);
+  const offersData = getOfferData(OffersData,OffersDataDesc);
   const offer = offersData.find((x) => x.id == params.id);
 
   if (offer == undefined) {
@@ -113,9 +113,9 @@ export async function generateStaticParams() {
 }
 
 const WorkType = async ({ params: { id, lang } }: Props) => {
-  const { OffersData, Work_type, Home, AboutUs, Performer } =
+  const { OffersData, OffersDataDesc,Work_type, Home, AboutUs, Performer } =
     await getDictionary(lang);
-  const offersData: typeOffersData[] = getOfferData(OffersData);
+  const offersData: typeOffersData[] =  getOfferData(OffersData,OffersDataDesc);
   const offer = offersData.find((x) => x.id == id);
   if (offer == undefined) notFound();
   let offersToShow = getNeighboring(offersData, 6, offer);
@@ -140,15 +140,11 @@ const WorkType = async ({ params: { id, lang } }: Props) => {
         <p>
           {Work_type.refinement} | <b>{offer?.processingTime}</b>
         </p>
-        {/*      <p>
-          {Work_type.author} | <b>{Work_type.teacher}</b>
-        </p>
-         <p>
-          {Work_type.experience_of_the_author} |{" "}
-          <b>
-            {offer?.experience}+ {Work_type.years}
-          </b>
-        </p> */}
+        {
+          <p className="work-description-desc">
+            <b>{offer.desc}</b>
+          </p>
+        }
       </div>
       {
         //<Button text={t("Home.order_work")} onClick={scrollToOrder} />
