@@ -12,12 +12,11 @@
     background-color: transparent;
     outline: none;
     border: none;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid rgb(0, 0, 0);
     font-size: 14px;
     line-height: 120%;
-    color: rgb(255, 255, 255);
     &::placeholder {
-      color: rgb(216, 214, 214);
+      color: rgb(56, 56, 56);
     }
   }
   &__input {
@@ -51,10 +50,8 @@
     margin-bottom: 20px;
     font-size: 16px;
     line-height: 150%;
-    color: rgb(255, 255, 255);
     &__alt {
       font-size: 18px;
-      color: white;
       font-weight: 600;
       line-height: 125%;
       margin-bottom: 20px;

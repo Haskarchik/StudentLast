@@ -19,14 +19,27 @@ const PhoneControl = <T extends FieldValues>({
   name,
 }: PhoneControlProps<T>) => {
   const [countryCode, setCountryCode] = useState<string>("ua");
-  const [phoneNumber, setPhoneNumber] = useState("+(380)");
+  const [phoneNumber, setPhoneNumber] = useState("+(380) ");
   const phoneRef = useRef();
+
+  function formatPhoneNumber(value: string) {
+    // Видаляємо всі символи, які не є цифрами, крім початкового коду країни
+    const cleanValue = value.replace(/[^\d]/g, "");
+
+    // Розділяємо номер на частини після коду країни
+    const match = cleanValue.match(/^380(\d{2})(\d{3})(\d{4})$/);
+
+    if (match) {
+      return `+(380) ${match[1]} ${match[2]} ${match[3]}`;
+    }
+
+    return `+(380) ${cleanValue.slice(3)}`; // Залишаємо код країни нетронутим
+  }
 
   function onPhoneNumberChanged(
     onChange: (event: ChangeEvent<HTMLInputElement>) => void
   ) {
     return (e: ChangeEvent<HTMLInputElement>) => {
-      const parsedNumber = parsePhoneNumber(e.target.value);
       const allowedChars = [
         "0",
         "1",
@@ -41,22 +54,25 @@ const PhoneControl = <T extends FieldValues>({
         "+",
         "(",
         ")",
+        " ",
       ];
+
       for (const c of e.target.value) {
         if (allowedChars.every((c2) => c !== c2)) {
           return;
         }
       }
-      if (e.target.value.length <= 15) {
-        setPhoneNumber(e.target.value);
-        onChange(e);
+
+      if (e.target.value.length <= 18) {
+        const formattedNumber = formatPhoneNumber(e.target.value);
+        setPhoneNumber(formattedNumber);
+        onChange({ ...e, target: { ...e.target, value: formattedNumber } });
 
         if (e.target.value === "") {
           setCountryCode("ua");
+          setPhoneNumber("+(380) ");
         }
-        if (parsedNumber && countryCode === "ua" && parsedNumber.country) {
-          setCountryCode(parsedNumber.country.toLowerCase());
-        }
+
         e.preventDefault();
       }
     };
@@ -68,7 +84,7 @@ const PhoneControl = <T extends FieldValues>({
         setCountryCode(event.target.value);
         const phoneNumber = `+(${countries.find(
           (country) => country.code === event.target.value
-        )?.phone})`;
+        )?.phone}) `;
         setPhoneNumber(phoneNumber);
         onChange(phoneNumber);
         event.preventDefault();
@@ -123,7 +139,7 @@ const PhoneControl = <T extends FieldValues>({
                   ))}
                 </Select>
                 <TextField
-                  defaultValue={"+(380)"}
+                  defaultValue={"+(380) "}
                   className="themeInput"
                   autoComplete="off"
                   fullWidth

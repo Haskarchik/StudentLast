@@ -5,9 +5,10 @@ import Question from './question/Question';
 
 type Props={
   questions:any
+  title:string
 }
 
-const QuestionsSection:React.FC<Props>=({questions})=> {
+const QuestionsSection:React.FC<Props>=({questions,title})=> {
   /*const questions = [
     {
       question: t("Work_type.question1"),
@@ -29,7 +30,7 @@ const QuestionsSection:React.FC<Props>=({questions})=> {
 
   return (
     <div className="question-wrapper">
-      <div className="question-section-title span-sub-article span-title">Популярні питання</div>
+      <div className="question-section-title span-sub-article span-title">{title}</div>
       {questions.map((question:{question:string,description:string}, index:number) => (
         <Question key={index} question={question.question} answer={question.description} />
       ))}

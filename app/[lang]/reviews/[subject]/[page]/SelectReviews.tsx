@@ -16,7 +16,7 @@ function findKeyByValue(obj:any, value:string) {
 const SelectReviews = ({subjects,reviews,lang,subject,typesOfWorkOptions}:{subjects:any,reviews:any,lang:Locale,typesOfWorkOptions:Array<string>,subject:string}) => {
     const router=useRouter();
     const [typesOptions, setTypesOptions] = useState([
-        lang == "ua" ? "Усі" : "All",
+        lang == "ua" ? "Усі" : "Все",
         ...typesOfWorkOptions,
     ]);
     const [value,setValue]=useState("");

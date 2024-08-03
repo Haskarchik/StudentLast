@@ -239,15 +239,15 @@ html::-webkit-scrollbar-thumb {
 }
 
 .span-article {
-  font-size: 42px;
-  line-height: 42px;
+  font-size: 24px;
+  line-height: 30px;
   font-family: 'CASlalomExtended', sans-serif;
   font-style: normal;
   font-weight: 700;
 
   @include lg{
-    font-size: 64px;
-    line-height: 88px;
+    font-size: 40px;
+    line-height: 50px;
   }
 
 }
@@ -270,4 +270,7 @@ html::-webkit-scrollbar-thumb {
 }
 .MuiAutocomplete-popper{
   background-color: #6B69E7;
+}
+.MuiDialog-paper{
+  background-color: #B3BAEE !important;
 }

@@ -128,6 +128,10 @@ const WorkType = async ({ params: { id, lang } }: Props) => {
         </div>
       </div>
       <div className={"work-description"}>
+      <p className="work-description-desc">
+            <b>{offer.desc}</b>
+          </p>
+        
         <p>
           {Work_type.average_price_of_work} |{" "}
           <b>{`${lang == "ua" ? offer?.price : Math.floor(offer.price / 30)} ${
@@ -140,11 +144,8 @@ const WorkType = async ({ params: { id, lang } }: Props) => {
         <p>
           {Work_type.refinement} | <b>{offer?.processingTime}</b>
         </p>
-        {
-          <p className="work-description-desc">
-            <b>{offer.desc}</b>
-          </p>
-        }
+        
+         
       </div>
       {
         //<Button text={t("Home.order_work")} onClick={scrollToOrder} />
@@ -160,7 +161,7 @@ const WorkType = async ({ params: { id, lang } }: Props) => {
         workTypes={offersToShow}
         title={offer.workName}
       />
-      <QuestionsSection questions={offer.question} />
+      <QuestionsSection questions={offer.question} title={OffersData.popular_question}/>
       <OrderAdvance className="order-advance" lang={lang} />
     </div>
   );

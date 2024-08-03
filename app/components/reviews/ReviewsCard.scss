@@ -13,7 +13,7 @@
   }
 }
 .reviewsCard-wrapper {
-  margin-top: 70px;
+  margin-top: 6rem;
   display: flex;
   flex-direction: column;
 
@@ -23,8 +23,6 @@
   }
 
   .reviewsCard-right {
-    padding-top: 2rem;
-
     @include lg {
       width: 50%;
     }

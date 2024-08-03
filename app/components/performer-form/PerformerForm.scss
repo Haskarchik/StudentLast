@@ -8,7 +8,6 @@
   @include lg {
     justify-content: space-between;
     flex-direction: row;
-    margin-top: 8.75rem;
   }
 
   .performer-form-item {
@@ -19,7 +18,7 @@
     font-family: "Comfortaa", sans-serif;
     font-weight: 600;
     font-size: 17px;
-    @include lg{
+     @include lg{
       margin-top: 0rem;
 
     }
@@ -55,10 +54,6 @@
       text-align: justify;
       color: black;
       font-size: 18px;
-
-      @include lg {
-        text-align: left;
-      }
     }
 
     .button-performer {

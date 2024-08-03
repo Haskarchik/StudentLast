@@ -1087,7 +1087,7 @@ export default async function Reviews({params:{lang,subject,page}}:{params:{lang
     return null;
   }
   if(subject==='all'){
-    selectSubject=lang=="ua"?"Усі":"All";
+    selectSubject=lang=="ua"?"Усі":"Все";
     showReviews=reviewsData.slice(pagesNumber*4-4,pagesNumber*4);
     countPages=reviewsData.length/4;
   }

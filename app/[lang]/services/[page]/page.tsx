@@ -44,7 +44,7 @@ const Services = async ({
 }: {
   params: { lang: Locale; page: string };
 }) => {
-  const { OffersData, Services } = await getDictionary(lang);
+  const { OffersData, Services, OffersDataName } = await getDictionary(lang);
   const from = OffersData.from;
   const days = OffersData.days;
   const hour = OffersData.hour;
@@ -56,7 +56,7 @@ const Services = async ({
   const offersData: Offer[] = [
     {
       id: 1,
-      workName: OffersData.abstracts,
+      workName: OffersDataName.abstracts,
       price: 250,
       time: `${to} 3 ${hour}`,
       processingTime: `${to} 1 ${day}`,
@@ -64,7 +64,7 @@ const Services = async ({
     },
     {
       id: 2,
-      workName: OffersData.dissertation,
+      workName: OffersDataName.dissertation,
       price: 50000,
       time: `${from} 30 ${days}`,
       processingTime: `${from} 7 ${days}`,
@@ -72,7 +72,7 @@ const Services = async ({
     },
     {
       id: 3,
-      workName: OffersData.practice_report,
+      workName: OffersDataName.practice_report,
       price: 750,
       time: `${from} 2 ${days}`,
       processingTime: `${from} 3 ${days}`,
@@ -80,7 +80,7 @@ const Services = async ({
     },
     {
       id: 4,
-      workName: OffersData.homework,
+      workName: OffersDataName.homework,
       price: 150,
       time: `${from} 2 ${days}`,
       processingTime: `${from} 3 ${days}`,
@@ -88,7 +88,7 @@ const Services = async ({
     },
     {
       id: 5,
-      workName: OffersData.coursework,
+      workName: OffersDataName.coursework,
       price: 750,
       time: `${from} 2 ${days}`,
       processingTime: `${from} 7 ${days}`,
@@ -96,7 +96,7 @@ const Services = async ({
     },
     {
       id: 6,
-      workName: OffersData.graduate_work,
+      workName: OffersDataName.graduate_work,
       price: 4000,
       time: `${from} 7 ${days}`,
       processingTime: `${from} 14 ${days}`,
@@ -104,7 +104,7 @@ const Services = async ({
     },
     {
       id: 7,
-      workName: OffersData.master_thesis,
+      workName: OffersDataName.master_thesis,
       price: 4500,
       time: `${from} 9 ${days}`,
       processingTime: `${from} 7 ${days}`,
@@ -112,7 +112,7 @@ const Services = async ({
     },
     {
       id: 8,
-      workName: OffersData.control_work,
+      workName: OffersDataName.control_work,
       price: 200,
       time: `${from} 1 ${day}`,
       processingTime: `${from} 1 ${day}`,
@@ -120,7 +120,7 @@ const Services = async ({
     },
     {
       id: 9,
-      workName: OffersData.lab,
+      workName: OffersDataName.lab,
       price: 150,
       time: `${from} 1 ${day}`,
       processingTime: `${from} 1 ${day}`,
@@ -128,7 +128,7 @@ const Services = async ({
     },
     {
       id: 10,
-      workName: OffersData.increasing_uniqueness,
+      workName: OffersDataName.increasing_uniqueness,
       price: 100,
       time: `${from} 1 ${day}`,
       processingTime: `${from} 1 ${day}`,
@@ -136,7 +136,7 @@ const Services = async ({
     },
     {
       id: 11,
-      workName: OffersData.essay,
+      workName: OffersDataName.essay,
       price: 200,
       time: `${to} 3 ${hour}`,
       processingTime: `${to} 1 ${day}`,
@@ -144,7 +144,7 @@ const Services = async ({
     },
     {
       id: 12,
-      workName: OffersData.article,
+      workName: OffersDataName.article,
       price: 250,
       time: `${to} 3 ${hour}`,
       processingTime: `${to} 1 ${day}`,
@@ -152,7 +152,7 @@ const Services = async ({
     },
     {
       id: 13,
-      workName: OffersData.problem,
+      workName: OffersDataName.problem,
       price: 60,
       time: `${from} 1 ${day}`,
       processingTime: `${from} 2 ${days}`,
@@ -160,7 +160,7 @@ const Services = async ({
     },
     {
       id: 14,
-      workName: OffersData.review,
+      workName: OffersDataName.review,
       price: 150,
       time: `${from} 1 ${day}`,
       processingTime: `${from} 3 ${hour}`,
@@ -168,7 +168,7 @@ const Services = async ({
     },
     {
       id: 15,
-      workName: OffersData.abstract,
+      workName: OffersDataName.abstract,
       price: 250,
       time: `${to} 1 ${hour}`,
       processingTime: `${to} 7 ${days}`,
@@ -176,7 +176,7 @@ const Services = async ({
     },
     {
       id: 16,
-      workName: OffersData.translation,
+      workName: OffersDataName.translation,
       price: 100,
       time: `${from} 1 ${day}`,
       processingTime: `${from} 7 ${days}`,
@@ -184,7 +184,7 @@ const Services = async ({
     },
     {
       id: 17,
-      workName: OffersData.drawing,
+      workName: OffersDataName.drawing,
       price: 150,
       time: `${from} 1 ${day}`,
       processingTime: `${from} 1 ${days}`,
@@ -192,7 +192,7 @@ const Services = async ({
     },
     {
       id: 18,
-      workName: OffersData.presentation,
+      workName: OffersDataName.presentation,
       price: 150,
       time: `${from} 3 ${hour}`,
       processingTime: `${from} 1 ${hour}`,
@@ -200,7 +200,7 @@ const Services = async ({
     },
     {
       id: 19,
-      workName: OffersData.business_plan,
+      workName: OffersDataName.business_plan,
       price: 800,
       time: `${from} 2 ${days}`,
       processingTime: `${from} 1 ${day}`,
@@ -208,7 +208,7 @@ const Services = async ({
     },
     {
       id: 20,
-      workName: OffersData.copywriting,
+      workName: OffersDataName.copywriting,
       price: 100,
       time: `${from} 1 ${day}`,
       processingTime: `${from} 1 ${day}`,
@@ -216,7 +216,7 @@ const Services = async ({
     },
     {
       id: 21,
-      workName: OffersData.online_exam,
+      workName: OffersDataName.online_exam,
       processingTime: `${from} 1 ${day}`,
       price: 250,
       time: `${from} 1 ${day}`,
@@ -224,7 +224,7 @@ const Services = async ({
     },
     {
       id: 22,
-      workName: OffersData.other,
+      workName: OffersDataName.other,
       price: 100,
       time: `${from} 1 ${day}`,
       processingTime: `${from} 1 ${day}`,

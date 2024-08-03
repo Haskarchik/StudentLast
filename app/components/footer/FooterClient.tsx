@@ -13,10 +13,12 @@ const FooterClient = ({
   lang,
   Routes,
   Performer,
+  footer
 }: {
   lang: Locale;
   Routes: any;
   Performer: any;
+  footer:any
 }) => {
   const [currentLang, setCurrentLang] = useState<Locale>(lang);
   const router = useRouter();
@@ -57,7 +59,7 @@ const FooterClient = ({
                 : { cursor: "pointer" }
             }
           >
-            Українська
+               {footer.ua}
           </div>
           <div
             className={`ru ${currentLang === "ru" ? "" : "active"}`}
@@ -68,12 +70,12 @@ const FooterClient = ({
                 : { cursor: "pointer" }
             }
           >
-            Російська
+           {footer.ru}
           </div>
         </div>
       </div>
       <div className="footer_navigatin">
-        <div className="footer_navigatin_title">Сила у знаннях</div>
+        <div className="footer_navigatin_title">{footer.label}</div>
         <div className="footer-items">
           <div className="footer-item-box">
             <Link className="footer-item" href={`/${currentLang}`}>
@@ -151,9 +153,9 @@ const FooterClient = ({
             : "Student Helper - Все права защищены."}
         </div>
         <div className="politic">
-          <Link href={`/${lang}/oferta`}>Договір Публічної Оферти</Link>
-          <Link href={`/${lang}/cookie`}>Cookie</Link>
-          <Link href={`/${lang}/political`}>Політика Конфіденційності</Link>
+          <Link href={`/${lang}/political`}>{footer.police}</Link>
+          <Link href={`/${lang}/oferta`}>{footer.oferta}</Link>
+          <Link href={`/${lang}/cookie`}>{footer.cookie}</Link>
         </div>
       </div>
     </div>

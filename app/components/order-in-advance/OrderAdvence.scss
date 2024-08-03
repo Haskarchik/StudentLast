@@ -8,7 +8,7 @@
   @include lg {
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 5rem;
+    margin-top: 6rem;
     &:hover {
       .order-item-span p {
         text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.61);
@@ -18,7 +18,6 @@
   }
 
   .order-items {
-    margin-top: 2rem;
 
     @include lg {
       width: 50%;
