@@ -56,7 +56,7 @@ const AboutUs =async ({params:{lang}}:{params:{lang:Locale}}) => {
       <span className="span-article span-title">{AboutUs.about_us}</span>
       <AboutUsPage article={Home.about_us_block} AboutUs={AboutUs}/>
       <div className={"why-we-wrapper"}>
-      <WhyWe data={WhyWeData} AboutUs={AboutUs} />;
+      <WhyWe data={WhyWeData} AboutUs={AboutUs} />
       </div>
       <WorkProcess AboutUs={AboutUs} lang={lang} left={true} />
       <JoinOurTeam lang={lang} />

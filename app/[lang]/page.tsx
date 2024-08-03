@@ -43,7 +43,7 @@ export default async function Home({
 }: {
   params: { lang: Locale };
 }) {
-  const { Home, OffersData, AboutUs } = await getDictionary(lang);
+  const { Home, OffersData, AboutUs,OffersDataName } = await getDictionary(lang);
 
   const WhyWeData = [
     {
@@ -71,7 +71,7 @@ export default async function Home({
   const offersData = [
     {
       id: 5,
-      workName: OffersData.coursework,
+      workName: OffersDataName.coursework,
       price: 750,
       time: `${from} 2 ${days}`,
       processingTime: `${from} 7 ${days}`,
@@ -79,7 +79,7 @@ export default async function Home({
     },
     {
       id: 6,
-      workName: OffersData.graduate_work,
+      workName: OffersDataName.graduate_work,
       price: 4000,
       time: `${from} 7 ${days}`,
       processingTime: `${from} 14 ${days}`,
@@ -87,7 +87,7 @@ export default async function Home({
     },
     {
       id: 3,
-      workName: OffersData.practice_report,
+      workName: OffersDataName.practice_report,
       price: 750,
       time: `${from} 2 ${days}`,
       processingTime: `${from} 3 ${days}`,
@@ -95,7 +95,7 @@ export default async function Home({
     },
     {
       id: 19,
-      workName: OffersData.business_plan,
+      workName: OffersDataName.business_plan,
       price: 800,
       time: `${from} 2 ${days}`,
       processingTime: `${from} 1 ${day}`,
