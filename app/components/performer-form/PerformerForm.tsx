@@ -1,20 +1,33 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import "./PerformerForm.scss";
 import PhoneControl from "../phone/PhoneControl";
 import Button from "../button/Button";
 import { Autocomplete, TextField } from "@mui/material";
 import { Controller, FieldError, SubmitHandler } from "react-hook-form";
-import usePerformerForm, { PerformerSchema } from "../performer-form copy/usePerformerForm";
+import usePerformerForm, {
+  PerformerSchema,
+} from "../performer-form copy/usePerformerForm";
 import CustomInput from "../custom-input/CustomInput";
 import ErrorBlock from "../error-block/ErrorBlock";
 import { TagsContext } from "../tags-input/TagsContext";
 import TagsInput from "../tags-input/TagsInput";
 import SuccessModal from "../success-modal/SuccessModal";
+import { Locale } from "@/i18n.config";
 
-
-const PerformerForm = ({Performer,profession,typesOfWorkOptions,subjectsOptions}:{subjectsOptions:any,Performer:any,profession:string[],typesOfWorkOptions:any}) => {
-
+const PerformerForm = ({
+  Performer,
+  profession,
+  typesOfWorkOptions,
+  subjectsOptions,
+  lang,
+}: {
+  subjectsOptions: any;
+  Performer: any;
+  profession: string[];
+  typesOfWorkOptions: any;
+  lang: Locale;
+}) => {
   const {
     control,
     handleSubmit,
@@ -57,7 +70,7 @@ const PerformerForm = ({Performer,profession,typesOfWorkOptions,subjectsOptions}
       alert(error);
     }
   };
-  
+
   return (
     <form
       onSubmit={handleSubmit(handleAddJob)}
@@ -78,7 +91,7 @@ const PerformerForm = ({Performer,profession,typesOfWorkOptions,subjectsOptions}
               field: { value: fullName, onChange: handleFullNameChange },
             }) => (
               <CustomInput
-                article={"Ім'я та прізвище"}
+                article={lang == "ua" ? "Ім'я та прізвище" : "Имя и фамилия"}
                 type="text"
                 value={fullName}
                 change={handleFullNameChange}

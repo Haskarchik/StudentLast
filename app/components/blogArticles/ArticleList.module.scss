@@ -1,0 +1,78 @@
+.articles {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.article {
+  display: flex;
+  background: transparent;
+  border-radius: 5px;
+  overflow: hidden;
+  max-height: 200px;
+}
+
+.article img {
+  border: 2px solid #ab9a8e;
+  border-radius: 10px;
+  width: 300px;
+  height: 160px;
+  object-fit: cover;
+  margin-right: 30px;
+}
+
+.articleContent {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-family: "Lora", sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 122%;
+    letter-spacing: -0.01em;
+    color: #100f1b;
+  }
+  p {
+    margin: 0 0 15px;
+    color: #000000;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    color: #100f1b;
+  }
+  div {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ab9a8e;
+  }
+}
+
+.articleMeta {
+  display: flex;
+  justify-content: flex-end;
+  color: #000000;
+  flex-direction: column;
+  font-family: "Lora", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 122%;
+  letter-spacing: -0.01em;
+  color: #100f1b;
+}
+
+.articleMeta .views,
+.articleMeta .date {
+  font-size: 12px;
+}

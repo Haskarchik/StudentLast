@@ -7,6 +7,7 @@ import "./ReviewsCard.scss";
 import ReviewsCardItem from "./ReviewsCardItem";
 import WhiteNavigateButton from "../white-navigate-button/WhiteNavigateButton";
 import { chekVisible } from "../visible-cheker/isVisible";
+import { Locale } from "@/i18n.config";
 
 interface ReviewsCardProps {
   AboutUs: {
@@ -14,6 +15,7 @@ interface ReviewsCardProps {
     customers: string;
     all_comment: string;
   };
+  lang:Locale
   reviewsData: Array<{
     id: number;
     photo: string;
@@ -24,7 +26,7 @@ interface ReviewsCardProps {
   }>;
 }
 
-const ReviewsCardClient: FC<ReviewsCardProps> = ({ AboutUs, reviewsData }) => {
+const ReviewsCardClient: FC<ReviewsCardProps> = ({ AboutUs, reviewsData ,lang}) => {
 
 
  
@@ -53,7 +55,7 @@ const ReviewsCardClient: FC<ReviewsCardProps> = ({ AboutUs, reviewsData }) => {
         <div className="button-wrapper">
           <WhiteNavigateButton
             content={AboutUs.all_comment}
-            to={`/reviews/all/1`}
+            to={`/${lang}/reviews/all/1`}
           />
         </div>
       </div>

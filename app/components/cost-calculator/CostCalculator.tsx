@@ -29,7 +29,7 @@ const CostCalculator = ({
   subjects: any;
   lang: Locale;
 }) => {
-  const { handleSubmit, errors, control, watch } = useCalculatorForm();
+  const { handleSubmit, errors, control, watch } = useCalculatorForm(lang);
   const [files, setFiles] = useState<File[]>();
   const uniqueness = watch("uniqueness", 0);
   const pages = watch("pages", 1);

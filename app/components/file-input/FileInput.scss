@@ -13,17 +13,17 @@
   max-width: 100%;
   font-weight: 900;
   transition-duration: 0.2s;
- 
-  &:hover{
+
+  &:hover {
     background: rgba(0, 0, 0, 0.072);
   }
-  div{
+  div {
     font-size: 17px;
     font-weight: 750;
     font-style: none;
     font-size-adjust: none;
   }
-  
+
   input {
     cursor: pointer;
     background-color: transparent;
@@ -34,9 +34,8 @@
     top: 0;
     opacity: 0;
     z-index: 10;
-  font-weight: 700;
-  font-family: 'Comfortaa', sans-serif;
-   
+    font-weight: 700;
+    font-family: "Comfortaa", sans-serif;
   }
 
   .file-area {
@@ -47,16 +46,13 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-   
   }
   .file-list-wrapper {
-    overflow: hidden;
   }
   .file-item {
     list-style: none;
     z-index: 11;
     max-width: inherit;
-    
   }
 
   .top-file-area {
@@ -65,8 +61,6 @@
     h4 {
       text-align: center;
     }
-
-
   }
 
   .no-files {

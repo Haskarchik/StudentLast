@@ -7,6 +7,8 @@ interface FileListProps {
 }
 
 export default function FileList({ files }: FileListProps) {
+  console.log(files);
+  
   return (
     <div className="file-list-wrapper">
       {files.map((file, index) => (

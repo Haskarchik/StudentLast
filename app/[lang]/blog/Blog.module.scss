@@ -1,0 +1,49 @@
+.container {
+  max-width: 1340px;
+  margin: auto;
+}
+.header {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 42px;
+  color: #2d3f4f;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  justify-content: space-between;
+  gap: 20px;
+  h1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+  }
+  .line{
+    background-color: #2d3f4f;
+    height: 1px;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.sortOptions {
+  font-size: 32px;
+  color: #2d3f4f;
+
+  width: 100%;
+  white-space: nowrap;
+  span:nth-child(1){
+    margin-left: 20px;
+  }
+
+  .sortOption {
+    font-size: 20px;
+    color: #2d3f4f;
+    margin-right: 15px;
+    &.active {
+      font-size: 32px;
+      color: #6B69E7;
+    }
+  }
+}

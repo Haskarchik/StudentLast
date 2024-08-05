@@ -28,6 +28,7 @@ export type typeOffersData = {
 
 export function getOfferData(OffersData: any, OffersDataDesc: any) {
   const from = OffersData.from;
+  const day = OffersData.day;
   const days = OffersData.days;
   const hour = OffersData.hour;
   const to = OffersData.to;
@@ -118,7 +119,7 @@ export function getOfferData(OffersData: any, OffersDataDesc: any) {
       workName: OffersData.business_plan,
       price: 800,
       time: `${from} 2 ${days}`,
-      processingTime: `1 ${days}`,
+      processingTime: `1 ${day}`,
       experience: 7,
       desc:  OffersDataDesc.business_plan,
       question: [
@@ -199,7 +200,7 @@ export function getOfferData(OffersData: any, OffersDataDesc: any) {
       workName: OffersData.article,
       price: 250,
       time: `${to} 3 ${hour}`,
-      processingTime: `${to} 1 ${days}`,
+      processingTime: `${to} 1 ${day}`,
       experience: 4,
       desc: OffersDataDesc.article,
       question: [
@@ -226,7 +227,7 @@ export function getOfferData(OffersData: any, OffersDataDesc: any) {
       workName: OffersData.abstracts,
       price: 250,
       time: `${to} 3 ${hour}`,
-      processingTime: `${to} 1 ${days}`,
+      processingTime: `${to} 1 ${day}`,
       experience: 4,
       desc: OffersDataDesc.abstracts,
       question: [
@@ -253,7 +254,7 @@ export function getOfferData(OffersData: any, OffersDataDesc: any) {
       workName: OffersData.essay,
       price: 200,
       time: `${to} 3 ${hour}`,
-      processingTime: `${to} 1 ${days}`,
+      processingTime: `${to} 1 ${day}`,
       experience: 5,
       desc: OffersDataDesc.essay,
       question: [
@@ -279,8 +280,8 @@ export function getOfferData(OffersData: any, OffersDataDesc: any) {
       id: 8,
       workName: OffersData.control_work,
       price: 200,
-      time: `1 ${days}`,
-      processingTime: `1 ${days}`,
+      time: `1 ${day}`,
+      processingTime: `1 ${day}`,
       experience: 5,
       desc: OffersDataDesc.control_work,
       question: [
@@ -333,7 +334,7 @@ export function getOfferData(OffersData: any, OffersDataDesc: any) {
       id: 13,
       workName: OffersData.problem,
       price: 60,
-      time: `${from} 1 ${days}`,
+      time: `${from} 1 ${day}`,
       processingTime: `2 ${days}`,
       experience: 4,
       desc: OffersDataDesc.problem,
@@ -387,8 +388,8 @@ export function getOfferData(OffersData: any, OffersDataDesc: any) {
       id: 10,
       workName: OffersData.increasing_uniqueness,
       price: 100,
-      time: `${from} 1 ${days}`,
-      processingTime: `1 ${days}`,
+      time: `${from} 1 ${day}`,
+      processingTime: `1 ${day}`,
       experience: 6,
       desc: OffersDataDesc.increasing_uniqueness,
       question: [
@@ -414,7 +415,7 @@ export function getOfferData(OffersData: any, OffersDataDesc: any) {
       id: 14,
       workName: OffersData.review,
       price: 150,
-      time: `${from} 1 ${days}`,
+      time: `${from} 1 ${day}`,
       processingTime: `3 ${hour}`,
       experience: 10,
       desc: OffersDataDesc.review,
@@ -441,7 +442,7 @@ export function getOfferData(OffersData: any, OffersDataDesc: any) {
       id: 16,
       workName: OffersData.translation,
       price: 100,
-      time: `${from} 1 ${days}`,
+      time: `${from} 1 ${day}`,
       processingTime: `7 ${days}`,
       experience: 10,
       desc: OffersDataDesc.translation,
@@ -468,8 +469,8 @@ export function getOfferData(OffersData: any, OffersDataDesc: any) {
       id: 17,
       workName: OffersData.drawing,
       price: 150,
-      time: `${from} 1 ${days}`,
-      processingTime: `1 ${days}`,
+      time: `${from} 1 ${day}`,
+      processingTime: `1 ${day}`,
       experience: 5,
       desc: OffersDataDesc.drawing,
       question: [
@@ -522,8 +523,8 @@ export function getOfferData(OffersData: any, OffersDataDesc: any) {
       id: 9,
       workName: OffersData.lab,
       price: 150,
-      time: `${from} 1 ${days}`,
-      processingTime: `1 ${days}`,
+      time: `${from} 1 ${day}`,
+      processingTime: `1 ${day}`,
       experience: 3,
       desc: OffersDataDesc.lab,
       question: [
@@ -548,9 +549,9 @@ export function getOfferData(OffersData: any, OffersDataDesc: any) {
     {
       id: 21,
       workName: OffersData.online_exam,
-      processingTime: `1 ${days}`,
+      processingTime: `1 ${day}`,
       price: 250,
-      time: `${from} 1 ${days}`,
+      time: `${from} 1 ${day}`,
       experience: 12,
       desc: OffersDataDesc.online_exam,
       question: [
@@ -576,8 +577,8 @@ export function getOfferData(OffersData: any, OffersDataDesc: any) {
       id: 20,
       workName: OffersData.copywriting,
       price: 100,
-      time: `${from} 1 ${days}`,
-      processingTime: `1 ${days}`,
+      time: `${from} 1 ${day}`,
+      processingTime: `1 ${day}`,
       experience: 5,
       desc: OffersDataDesc.copywriting,
       question: [
@@ -603,8 +604,8 @@ export function getOfferData(OffersData: any, OffersDataDesc: any) {
       id: 22,
       workName: OffersData.other,
       price: 100,
-      time: `${from} 1 ${days}`,
-      processingTime: `${from} 1 ${days}`,
+      time: `${from} 1 ${day}`,
+      processingTime: `${from} 1 ${day}`,
       experience: 2,
       desc: OffersDataDesc.other,
       question: [

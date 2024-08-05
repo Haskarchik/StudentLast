@@ -564,6 +564,7 @@ const Performer = async ({
         subjectsOptions={subjectsOptions}
         profession={profession}
         Performer={Performer}
+        lang ={lang}
       />
     </div>
   );

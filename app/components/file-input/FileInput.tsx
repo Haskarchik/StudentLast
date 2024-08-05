@@ -10,10 +10,12 @@ import { BsFileEarmarkPost } from "react-icons/bs";
 const FileInput = ({ onChange,Home }: { onChange: (files: File[]) => void,Home:any }) => {
   const [files, setFiles] = React.useState<File[]>([]);
 
+  console.log(files);
+  
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     const fileUploaded:any = event.target.files;
     if (fileUploaded) {
-      setFiles([...fileUploaded]);
+      setFiles(prevArray => [...prevArray,fileUploaded]);
     }
   };
 

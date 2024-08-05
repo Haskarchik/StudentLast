@@ -113,9 +113,9 @@ export async function generateStaticParams() {
 }
 
 const WorkType = async ({ params: { id, lang } }: Props) => {
-  const { OffersData, OffersDataDesc,Work_type, Home, AboutUs, Performer } =
+  const { OffersData,OffersDataName, OffersDataDesc,Work_type, Home, AboutUs, Performer } =
     await getDictionary(lang);
-  const offersData: typeOffersData[] =  getOfferData(OffersData,OffersDataDesc);
+  const offersData: typeOffersData[] =  getOfferData(OffersDataName,OffersDataDesc);
   const offer = offersData.find((x) => x.id == id);
   if (offer == undefined) notFound();
   let offersToShow = getNeighboring(offersData, 6, offer);

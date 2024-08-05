@@ -48,7 +48,7 @@ const ReviewsCard = async ({ type, lang }: ReviewsCardProps) => {
 
   return (
     <>
-      <ReviewsCardClient AboutUs={AboutUs} reviewsData={reviewsData} />
+      <ReviewsCardClient AboutUs={AboutUs} reviewsData={reviewsData} lang={lang} />
     </>
   );
 };
