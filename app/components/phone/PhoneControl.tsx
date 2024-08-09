@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { ChangeEvent, useRef, useState } from "react";
 import "./PhoneControl.scss";
 import parsePhoneNumber from "libphonenumber-js";
@@ -149,6 +149,7 @@ const PhoneControl = <T extends FieldValues>({
                     "input::placeholder": {
                       opacity: 0.8,
                       fontFamily: "Times, Times New Roman, serif",
+                      fontSize: "17px",
                     },
                   }}
                   inputRef={phoneRef}

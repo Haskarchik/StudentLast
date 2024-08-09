@@ -95,6 +95,7 @@ const PerformerForm = ({
                 type="text"
                 value={fullName}
                 change={handleFullNameChange}
+                
               />
             )}
             name={"fullName"}

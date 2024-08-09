@@ -4,7 +4,7 @@ export const initialArticles = [
     title: "Вимоги до написання курсової роботи",
     subTitle:
       "Курсова робота складається з трьох основних частин: вступу, основного змісту і висновків...",
-    vievs: 3521,
+    views: 3521,
     time: "1:00",
     date: "03.03.2023",
     image: "/img/Blog/Articles_img/1_article.png",
@@ -40,7 +40,7 @@ export const initialArticles = [
     title: "Правила оформлення курсової роботи",
     subTitle:
       "Оформлення курсової роботи є дуже важливим аспектом, що впливає на оцінку вашого до...",
-    vievs: 2236,
+    views: 2236,
     time: "19:00",
     date: "03.03.2023",
     image: "/img/Blog/Articles_img/2_article.png",
@@ -83,7 +83,7 @@ export const initialArticles = [
     title: "Вимоги до титульного листа курсової роботи",
     subTitle:
       "Титульний лист курсової роботи є важливим елементом, адже він слугує обличчям вашого...",
-    vievs: 4184,
+    views: 4184,
     time: "12:00",
     date: "03.03.2023",
     image: "/img/Blog/Articles_img/3_article.png",
@@ -122,7 +122,7 @@ export const initialArticles = [
     title: "Як скласти план до курсової роботи",
     subTitle:
       "Обравши тему для курсової роботи, студенту слід насамперед визначити, на які питання сл...",
-    vievs: 1639,
+    views: 1639,
     time: "5:00",
     date: "03.03.2023",
     image: "/img/Blog/Articles_img/4_article.png",
@@ -159,7 +159,7 @@ export const initialArticles = [
     title: "Як перевірити роботу на унікальність",
     subTitle:
       "Один з критеріїв для допуску курсових чи дипломних робіт до захисту — високий рівень ун...",
-    vievs: 2734,
+    views: 2734,
     time: "21:00",
     date: "04.03.2023",
     image: "/img/Blog/Articles_img/5_article.png",
@@ -204,7 +204,7 @@ export const initialArticles = [
     title: "Як правильно скласти бізнес-план",
     subTitle:
       "Бізнес-план — це документ, у якому чітко визначені цілі бізнесу, терміни їх досягнення та ш...",
-    vievs: 5789,
+    views: 5789,
     time: "15:00",
     date: "04.03.2023",
     image: "/img/Blog/Articles_img/6_article.png",
@@ -255,7 +255,7 @@ export const initialArticles = [
     title: "Вимоги до унікальності студентських робіт",
     subTitle:
       "Унікальність тексту означає, що він є оригінальним і не повторює вже існуючих джерел. Це...",
-    vievs: 8942,
+    views: 8942,
     time: "2:00",
     date: "04.03.2023",
     image: "/img/Blog/Articles_img/7_article.png",
@@ -309,7 +309,7 @@ export const initialArticles = [
     title: "5 стратегій для проходження на плагіат",
     subTitle:
       "Написання будь-якої роботи (реферату, курсової, дипломної роботи та ін.) складається з то...",
-    vievs: 4927,
+    views: 4927,
     time: "16:00",
     date: "04.03.2023",
     image: "/img/Blog/Articles_img/8_article.png",

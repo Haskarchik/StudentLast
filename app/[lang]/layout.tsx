@@ -4,6 +4,9 @@ import { Inter } from "next/font/google";
 import "../App.scss";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
+import { BlogProvider } from "./blog/BlogContext";
+import React from "react";
+
 const inter = Inter({ subsets: ["latin"] });
 
 type Props = {
@@ -13,15 +16,12 @@ type Props = {
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
-export default function RootLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode;
-  params: { lang: Locale };
-}) {
+
+const RootLayout = ({ children, params }: { children: React.ReactNode; params: { lang: Locale }; }) => {
+  const language = params.lang === "ua" ? "uk" : "ru";
+
   return (
-    <html lang={params.lang == "ua" ? "uk" : "ru"}>
+    <html lang={language}>
       <body className={inter.className}>
         <div className="root">
           <header>
@@ -29,7 +29,9 @@ export default function RootLayout({
           </header>
           <main>
             <div className="routes">
-              <div className="routes scroll-container">{children}</div>
+              <div className="routes scroll-container">
+                <BlogProvider>{children}</BlogProvider>
+              </div>
             </div>
           </main>
           <footer>
@@ -39,4 +41,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default React.memo(RootLayout);

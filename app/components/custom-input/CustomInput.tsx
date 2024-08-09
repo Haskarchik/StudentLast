@@ -11,7 +11,7 @@ interface InputProps {
 
 const CustomInput: FC<InputProps> = ({ type, change, value, article, placeholder }) => {
   return (
-    <div>
+    <div style={{fontSize:'17px'}}>
       <span>{article}</span>
       <input
         className="themeInput"

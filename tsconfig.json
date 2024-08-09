@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/[lang]/academicdictionary/page.jsx", "app/[lang]/academicdictionary/page.jsx", "app/[lang]/not-found.js", "app/[lang]/not-found.js", "app/[lang]/political/page.jsx", "app/components/blogArticles/page.jsx", "app/[lang]/blog/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/[lang]/academicdictionary/page.jsx", "app/[lang]/academicdictionary/page.jsx", "app/[lang]/not-found.js", "app/[lang]/not-found.js", "app/[lang]/political/page.jsx", "app/components/blogArticles/page.tsx", "app/[lang]/blog/page.tsx", "app/[lang]/blog/[page]/page.tsx"],
   "exclude": ["node_modules"]
 }

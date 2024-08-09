@@ -152,7 +152,7 @@ const WorkType = async ({ params: { id, lang } }: Props) => {
       }
       <div className="order-button"></div>
       <PriceCalculating lang={lang} ref1={null} />
-      <HowToOrder Performer={Performer} />;
+      <HowToOrder Performer={Performer} />
       <WorkProcess AboutUs={AboutUs} lang={lang} left={true} />
       <ReviewsCard lang={lang} type={offer.workName} />
       <WorkTypeList
