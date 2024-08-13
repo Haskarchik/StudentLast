@@ -30,6 +30,9 @@
       font-family: 'Noto Serif Display';
       font-weight: 600;
       transition-duration: .3s;
+      @media (max-width:1200px) {
+        word-break: break-all;
+      }
       @include lg {
         font-size: 24px;
    

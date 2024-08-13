@@ -75,9 +75,9 @@
       color: black;
       text-align: justify;
       white-space: pre-line;
+      text-align: left;
 
       @include lg {
-        text-align: left;
       }
     }
   }

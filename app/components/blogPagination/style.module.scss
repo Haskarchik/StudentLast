@@ -1,0 +1,49 @@
+.blogPagination {
+  margin: auto;
+  max-width: 1240px;
+  margin-top: 40px;
+  &__row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__prevBtn {
+    cursor: pointer;
+  }
+  &__nextBtn {
+    cursor: pointer;
+    img {
+      rotate: 180deg;
+    }
+  }
+  &__list {
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    li {
+      transition: 0.3s;
+      list-style: none;
+      cursor: pointer;
+
+      button {
+        background-color: transparent;
+        font-weight: normal;
+        padding: 2px 7px;
+        border: none;
+        border-radius: 3px;
+        color: #ffffff;
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+    .active {
+      transition: 0.3s;
+      button {
+        transition: 0.3s;
+        background-color: #6b69e7;
+        color: white;
+      }
+    }
+  }
+}

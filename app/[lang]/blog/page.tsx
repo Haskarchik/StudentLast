@@ -13,46 +13,45 @@ interface BlogProps {
 }
 
 export default function Blog({ params: { lang } }: BlogProps) {
-  const { articles, sortBy, setSortBy } = useBlogContext();
-
+  const { articles, sortBy, setSortBy, displayedArticles } = useBlogContext();
   return (
-      <div className={styles.container}>
-        <main>
-          <header className={styles.header}>
-            <h1>Статті</h1>
-            <span className={styles.line}></span>
-            <div className={styles.sortOptions}>
-              Сортувати за:
-              <span
-                className={`${styles.sortOption} ${
-                  sortBy === "date" ? styles.active : ""
-                }`}
-                onClick={() => setSortBy("date")}
-              >
-                Date
-              </span>
-              <span
-                className={`${styles.sortOption} ${
-                  sortBy === "name" ? styles.active : ""
-                }`}
-                onClick={() => setSortBy("name")}
-              >
-                Name
-              </span>
-              <span
-                className={`${styles.sortOption} ${
-                  sortBy === "views" ? styles.active : ""
-                }`}
-                onClick={() => setSortBy("views")}
-              >
-                Views
-              </span>
-            </div>
-          </header>
+    <div className={styles.container}>
+      <main>
+        <header className={styles.header}>
+          <h1>Статті</h1>
+          <span className={styles.line}></span>
+          <div className={styles.sortOptions}>
+            Сортувати за:
+            <span
+              className={`${styles.sortOption} ${
+                sortBy === "date" ? styles.active : ""
+              }`}
+              onClick={() => setSortBy("date")}
+            >
+              Date
+            </span>
+            <span
+              className={`${styles.sortOption} ${
+                sortBy === "name" ? styles.active : ""
+              }`}
+              onClick={() => setSortBy("name")}
+            >
+              Name
+            </span>
+            <span
+              className={`${styles.sortOption} ${
+                sortBy === "views" ? styles.active : ""
+              }`}
+              onClick={() => setSortBy("views")}
+            >
+              Views
+            </span>
+          </div>
+        </header>
 
-          <ArticleList articles={articles} lang={lang} />
-          <BlogPagination />
-        </main>
-      </div>
+        <ArticleList articles={displayedArticles()} lang={lang} />
+        <BlogPagination />
+      </main>
+    </div>
   );
 }

@@ -26,6 +26,11 @@
         font-family: 'Roboto Slab';
         font-weight: 400;
         text-align: justify;
+        @media (max-width:1200px) {
+          
+          word-break: break-all;
+
+        }
       }
 
       @include lg {

@@ -30,130 +30,227 @@ export default function ClientPage() {
 
   return (
     <div key={activeArticle.id} className={style.article}>
-      {activeArticle.title}
+      <div className={style.article__title}>{activeArticle.title}</div>
       <div className={style.article__picture}>
         <Image
           src={activeArticle.image}
           alt={activeArticle.title + " Picture"}
-          width={100}
-          height={100}
+          width={1000}
+          height={1000}
         />
       </div>
-      <div className={style.article__subtitle}>{activeArticle.subTitle}</div>
-      <h2 className={style.article__chapter}>{activeArticle.chapter_1}</h2>
-      <div className={style.article__chapter_text}>
-        {activeArticle.chapter_1_text.map((el: string | string[]) => {
-          if (el === "") {
-            return "";
-          }
-          if (isArray(el)) {
-            return (
-              <ul>
-                {el.map((SubEl: any) => {
-                  return <li>{SubEl}</li>;
-                })}
-              </ul>
-            );
-          } else {
-            return <li>{el}</li>;
-          }
-        })}
-      </div>
-      <h2 className={style.article__chapter}>{activeArticle.chapter_2}</h2>
-      <div className={style.article__chapter_text}>
-        {activeArticle.chapter_2_text.map((el: string | string[]) => {
-          if (el === "") {
-            return "";
-          }
-          if (isArray(el)) {
-            return (
-              <ul>
-                {el.map((SubEl: any) => {
-                  return <li>{SubEl}</li>;
-                })}
-              </ul>
-            );
-          } else {
-            return <li>{el}</li>;
-          }
-        })}
-      </div>
-      <h2 className={style.article__chapter}>{activeArticle.chapter_3}</h2>
-      <div className={style.article__chapter_text}>
-        {activeArticle.chapter_3_text.map((el: string | string[]) => {
-          if (el === "") {
-            return "";
-          }
-          if (isArray(el)) {
-            return (
-              <ul>
-                {el.map((SubEl: any) => {
-                  return <li>{SubEl}</li>;
-                })}
-              </ul>
-            );
-          } else {
-            return <li>{el}</li>;
-          }
-        })}
-      </div>
-      <h2 className={style.article__chapter}>{activeArticle.chapter_4}</h2>
-      <div className={style.article__chapter_text}>
-        {activeArticle.chapter_4_text.map((el: string | string[]) => {
-          if (el === "") {
-            return "";
-          }
-          if (isArray(el)) {
-            return (
-              <ul>
-                {el.map((SubEl: any) => {
-                  return <li>{SubEl}</li>;
-                })}
-              </ul>
-            );
-          } else {
-            return <li>{el}</li>;
-          }
-        })}
-      </div>
-      <h2 className={style.article__chapter}>{activeArticle.chapter_5}</h2>
-      <div className={style.article__chapter_text}>
-        {activeArticle.chapter_5_text.map((el: string | string[]) => {
-          if (el === "") {
-            return "";
-          }
-          if (isArray(el)) {
-            return (
-              <ul>
-                {el.map((SubEl: any) => {
-                  return <li>{SubEl}</li>;
-                })}
-              </ul>
-            );
-          } else {
-            return <li>{el}</li>;
-          }
-        })}
-      </div>
-      <h2 className={style.article__chapter}>{activeArticle.chapter_6}</h2>
-      <div className={style.article__chapter_text}>
-        {activeArticle.chapter_6_text.map((el: string | string[]) => {
-          if (el === "") {
-            return "";
-          }
-          if (isArray(el)) {
-            return (
-              <ul>
-                {el.map((SubEl: any) => {
-                  return <li>{SubEl}</li>;
-                })}
-              </ul>
-            );
-          } else {
-            return <li>{el}</li>;
-          }
-        })}
-      </div>
+      <div className={style.article__subtitle}>{activeArticle.paragraph_1}</div>
+      {activeArticle.chapter_1 !== "" && (
+        <>
+          <h2 className={style.article__chapter}>{activeArticle.chapter_1}</h2>
+          <ul className={style.article__chapter_text}>
+            {activeArticle.chapter_1_text.map((el: string | string[]) => {
+              if (el === "") {
+                return "";
+              }
+              if (isArray(el)) {
+                return (
+                  <ul>
+                    {el.map((SubEl: any) => {
+                      return (
+                        <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>
+                      );
+                    })}
+                  </ul>
+                );
+              } else {
+                return (
+                  <li
+                    dangerouslySetInnerHTML={{
+                      __html: el,
+                    }}
+                  ></li>
+                );
+              }
+            })}
+          </ul>
+        </>
+      )}
+      {activeArticle.chapter_2 !== "" && (
+        <>
+          <h2 className={style.article__chapter}>{activeArticle.chapter_2}</h2>
+          <ul className={style.article__chapter_text}>
+            {activeArticle.chapter_2_text.map((el: string | string[]) => {
+              if (el === "") {
+                return "";
+              }
+              if (isArray(el)) {
+                return (
+                  <ol>
+                    {el.map((SubEl: any) => {
+                      return (
+                        <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>
+                      );
+                    })}
+                  </ol>
+                );
+              } else {
+                return (
+                  <li
+                    dangerouslySetInnerHTML={{
+                      __html: el,
+                    }}
+                  ></li>
+                );
+              }
+            })}
+          </ul>
+        </>
+      )}
+      {activeArticle.chapter_3 !== "" && (
+        <>
+          {" "}
+          <h2 className={style.article__chapter}>{activeArticle.chapter_3}</h2>
+          <ul className={style.article__chapter_text}>
+            {activeArticle.chapter_3_text.map((el: string | string[]) => {
+              if (el === "") {
+                return "";
+              }
+              if (isArray(el)) {
+                return (
+                  <ul>
+                    {el.map((SubEl: any) => {
+                      return (
+                        <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>
+                      );
+                    })}
+                  </ul>
+                );
+              } else {
+                return (
+                  <li
+                    dangerouslySetInnerHTML={{
+                      __html: el,
+                    }}
+                  ></li>
+                );
+              }
+            })}
+          </ul>
+        </>
+      )}
+      {activeArticle.chapter_4 !== "" && (
+        <>
+          <h2 className={style.article__chapter}>{activeArticle.chapter_4}</h2>
+          <ul className={style.article__chapter_text}>
+            {activeArticle.chapter_4_text.map((el: string | string[]) => {
+              if (activeArticle.chapter_4 === "") {
+                return;
+              }
+              if (isArray(el)) {
+                return (
+                  <ul>
+                    {el.map((SubEl: any) => {
+                      return (
+                        <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>
+                      );
+                    })}
+                  </ul>
+                );
+              } else {
+                return (
+                  <li
+                    dangerouslySetInnerHTML={{
+                      __html: el,
+                    }}
+                  ></li>
+                );
+              }
+            })}
+          </ul>
+        </>
+      )}
+      {activeArticle.chapter_5 !== "" && (
+        <>
+          <h2 className={style.article__chapter}>{activeArticle.chapter_5}</h2>
+          <div className={style.article__chapter_text}>
+            {activeArticle.chapter_5_text.map((el: string | string[]) => {
+              if (activeArticle.chapter_5 === "") {
+                return;
+              }
+              if (isArray(el)) {
+                return (
+                  <ul>
+                    {el.map((SubEl: any) => {
+                      return (
+                        <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>
+                      );
+                    })}
+                  </ul>
+                );
+              } else {
+                return (
+                  <li
+                    dangerouslySetInnerHTML={{
+                      __html: el,
+                    }}
+                  ></li>
+                );
+              }
+            })}
+          </div>
+        </>
+      )}
+      {activeArticle.chapter_6 !== "" && (
+        <>
+          <h2 className={style.article__chapter}>{activeArticle.chapter_6}</h2>
+          <ul className={style.article__chapter_text}>
+            {activeArticle.chapter_6_text.map((el: string | string[]) => {
+              if (activeArticle.chapter_6 === "") {
+                return;
+              }
+              if (isArray(el)) {
+                return (
+                  <ul>
+                    {el.map((SubEl: any) => {
+                      return (
+                        <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>
+                      );
+                    })}
+                  </ul>
+                );
+              } else {
+                return (
+                  <li
+                    dangerouslySetInnerHTML={{
+                      __html: el,
+                    }}
+                  ></li>
+                );
+              }
+            })}
+          </ul>
+        </>
+      )}
     </div>
   );
 }

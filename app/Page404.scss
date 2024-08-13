@@ -11,8 +11,10 @@
     line-height: 112%;
     text-align: justify;
     color: #000;
+    
     @media (max-width: 768px) {
-      font-size: 30px;
+      font-size: 25px;
+
     }
   }
   .description {

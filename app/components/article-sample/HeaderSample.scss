@@ -24,11 +24,13 @@
   }
 
   p {
+    word-break: break-all;
     margin-top: 2rem;
     text-align: justify;
     @include lg {
       width: 40rem;
       text-align: start;
+      word-break: normal;
     }
   }
 
@@ -36,4 +38,3 @@
     display: block;
   }
 }
-

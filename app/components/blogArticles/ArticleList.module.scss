@@ -17,7 +17,7 @@
 }
 
 .article img {
-  border: 2px solid #ab9a8e;
+  border: 2px solid #806497;
   border-radius: 10px;
   width: 300px;
   height: 160px;
@@ -55,24 +55,33 @@
     font-family: "Inter", sans-serif;
     font-weight: 500;
     font-size: 16px;
-    color: #ab9a8e;
+    color: #000000;
   }
 }
 
 .articleMeta {
   display: flex;
   justify-content: flex-end;
-  color: #000000;
   flex-direction: column;
   font-family: "Lora", sans-serif;
   font-weight: 500;
   font-size: 32px;
   line-height: 122%;
   letter-spacing: -0.01em;
-  color: #100f1b;
+  color: #000000;
+  img {
+    width: 20px;
+    height: 20px;
+    border: none;
+    margin-right: 5px;
+  }
+}
+.articleMeta .time {
+  display: flex;
+  align-items: center;
 }
 
-.articleMeta .views,
+.articleMeta .time,
 .articleMeta .date {
   font-size: 12px;
 }
