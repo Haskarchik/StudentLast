@@ -66,8 +66,10 @@ export async function generateMetadata(
   { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const { OffersData, OffersDataDesc,AboutUs } = await getDictionary(params.lang);
-  const offersData = getOfferData(OffersData,OffersDataDesc);
+  const { OffersData, OffersDataDesc, AboutUs } = await getDictionary(
+    params.lang
+  );
+  const offersData = getOfferData(OffersData, OffersDataDesc);
   const offer = offersData.find((x) => x.id == params.id);
 
   if (offer == undefined) {
@@ -113,30 +115,47 @@ export async function generateStaticParams() {
 }
 
 const WorkType = async ({ params: { id, lang } }: Props) => {
-  const { OffersData,OffersDataName, OffersDataDesc,Work_type, Home, AboutUs, Performer } =
-    await getDictionary(lang);
-  const offersData: typeOffersData[] =  getOfferData(OffersData,OffersDataDesc);
+  const {
+    OffersData,
+    OffersDataName,
+    OffersDataDesc,
+    Work_type,
+    Home,
+    AboutUs,
+    Performer,
+  } = await getDictionary(lang);
+  const offersData: typeOffersData[] = getOfferData(
+    OffersDataName,
+    OffersDataDesc
+  );
+  const offersDataName: typeOffersData[] = getOfferData(
+    OffersData,
+    OffersDataDesc
+  );
   const offer = offersData.find((x) => x.id == id);
-  if (offer == undefined) notFound();
+  const offerName = offersDataName.find((x) => x.id == id);
+  if (offer == undefined || offerName == undefined) notFound();
   let offersToShow = getNeighboring(offersData, 6, offer);
 
   return (
     <div className={"work-type-wrapper"}>
       <div className="main-text">
         <div className="main-article-wrapper">
-          <span className="span-article span-title">{offer?.workName}</span>
+          <span className="span-article span-title">
+            {offersDataName.find((x) => x.id == id)?.workName}
+          </span>
         </div>
       </div>
       <div className={"work-description"}>
-      <p className="work-description-desc">
-            <b>{offer.desc}</b>
-          </p>
-        
+        <p className="work-description-desc">
+          <b>{offer.desc}</b>
+        </p>
+
         <p>
           {Work_type.average_price_of_work} |{" "}
-          <b>{`${lang == "ua" ? offer?.price : Math.floor(offer.price / 30)} ${
-            OffersData.currency
-          }`}</b>
+          <b>{`
+          ${offer?.price}
+          ${OffersData.currency}`}</b>
         </p>
         <p>
           {Work_type.deadline} | <b>{offer?.time}</b>
@@ -144,8 +163,6 @@ const WorkType = async ({ params: { id, lang } }: Props) => {
         <p>
           {Work_type.refinement} | <b>{offer?.processingTime}</b>
         </p>
-        
-         
       </div>
       {
         //<Button text={t("Home.order_work")} onClick={scrollToOrder} />
@@ -159,9 +176,12 @@ const WorkType = async ({ params: { id, lang } }: Props) => {
         lang={lang}
         className="work-type-list"
         workTypes={offersToShow}
-        title={offer.workName}
+        title={offerName.workName}
       />
-      <QuestionsSection questions={offer.question} title={OffersData.popular_question}/>
+      <QuestionsSection
+        questions={offer.question}
+        title={OffersData.popular_question}
+      />
       <OrderAdvance className="order-advance" lang={lang} />
     </div>
   );

@@ -184,10 +184,10 @@ export default function ClientPage() {
       {activeArticle.chapter_5 !== "" && (
         <>
           <h2 className={style.article__chapter}>{activeArticle.chapter_5}</h2>
-          <div className={style.article__chapter_text}>
+          <ul className={style.article__chapter_text}>
             {activeArticle.chapter_5_text.map((el: string | string[]) => {
-              if (activeArticle.chapter_5 === "") {
-                return;
+              if (el === "") {
+                return "";
               }
               if (isArray(el)) {
                 return (
@@ -213,7 +213,7 @@ export default function ClientPage() {
                 );
               }
             })}
-          </div>
+          </ul>
         </>
       )}
       {activeArticle.chapter_6 !== "" && (

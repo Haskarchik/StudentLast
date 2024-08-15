@@ -1,13 +1,18 @@
 "use client";
-import { SyntheticEvent } from "react";
+import { SyntheticEvent, useMemo } from "react";
 import CustomAutocomplete from "../custom-autocomplete/CustomAutocomplete";
+import { CalculatorSchema } from "../cost-calculator copy/useCalculatorForm";
+import { Control } from "react-hook-form";
 
-/*export interface SubjectAutocompleteProps {
+
+export interface SubjectAutocompleteProps {
   control: Control<CalculatorSchema>;
-}*/
-
-export default function SubjectAutocomplete({ control, subjects, Home }: any) {
-  const subjectsOptions: Array<string> = [
+  subjects: Record<string, string>;
+  Home: { select_descipline: string };
+}
+export default function SubjectAutocomplete({ control, subjects, Home }: SubjectAutocompleteProps) {
+  const subjectsOptions = useMemo(() => Object.values(subjects), [subjects]);
+  /* const subjectsOptions: Array<string> = [
     subjects.management,
     subjects.marketing,
     subjects.restaurant_business,
@@ -343,7 +348,8 @@ export default function SubjectAutocomplete({ control, subjects, Home }: any) {
     subjects.SchoolMathematics,
     subjects.LegalPsychology,
     subjects.Jurisprudence,
-  ];
+  ]; */
+  
   return (
     <CustomAutocomplete
       placeholder={Home.select_descipline}

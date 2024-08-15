@@ -261,6 +261,9 @@ html::-webkit-scrollbar-thumb {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  @media (max-width:1200px) {
+   margin-bottom: 20px;
+  }
 }
 
 @media (min-width:425px) {

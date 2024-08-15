@@ -53,7 +53,7 @@ const AboutUs =async ({params:{lang}}:{params:{lang:Locale}}) => {
 
   return (
     <div className="wrapper-aboutUs">
-      <span className="span-article span-title">{AboutUs.about_us}</span>
+{/*       <span className="span-article span-title">{AboutUs.about_us}</span> */}
       <AboutUsPage article={Home.about_us_block} AboutUs={AboutUs}/>
       <div className={"why-we-wrapper"}>
       <WhyWe data={WhyWeData} AboutUs={AboutUs} />

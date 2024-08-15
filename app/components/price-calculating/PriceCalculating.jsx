@@ -5,7 +5,7 @@ import { Locale } from '@/i18n.config'
 
 const PriceCalculating =async ({ ref1 = null,lang }) => {
   const {Home, subjects}=await getDictionary(lang)
-
+  
   return ref1 === undefined ? (
     <>...loading</>
   ) : (

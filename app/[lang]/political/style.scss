@@ -10,6 +10,9 @@
     letter-spacing: 0.01em;
     text-align: justify;
     color: #100f1b;
+    a {
+      color: #100f1b;
+    }
     ul li {
       margin-bottom: 20px;
       list-style: none;
@@ -18,10 +21,10 @@
       margin-top: -10px;
       margin-bottom: 20px;
       li {
-      list-style: disc;
-      margin: 0px 0px 10px 25px;
-      
-    }}
+        list-style: disc;
+        margin: 0px 0px 10px 25px;
+      }
+    }
     h2 {
       margin: 40px 5px;
     }

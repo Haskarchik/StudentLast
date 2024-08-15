@@ -76,9 +76,11 @@
     margin-right: 5px;
   }
 }
-.articleMeta .time {
+.articleMeta {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  
 }
 
 .articleMeta .time,

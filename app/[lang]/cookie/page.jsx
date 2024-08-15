@@ -20,12 +20,20 @@ export default async function Cookie(
             return (
               <ul>
                 {el.map((SubEl) => {
-                  return <li>{SubEl}</li>;
+                  return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>;
                 })}
               </ul>
             );
           } else {
-            return <li>{el}</li>;
+            return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: el,
+                          }}
+                        ></li>;
           }
         })}
       </ul>
@@ -38,12 +46,20 @@ export default async function Cookie(
             return (
               <ul>
                 {el.map((SubEl) => {
-                  return <li>{SubEl}</li>;
+                  return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>;
                 })}
               </ul>
             );
           } else {
-            return <li>{el}</li>;
+            return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: el,
+                          }}
+                        ></li>;
           }
         })}
       </ul>
@@ -56,12 +72,20 @@ export default async function Cookie(
             return (
               <ul>
                 {el.map((SubEl) => {
-                  return <li>{SubEl}</li>;
+                  return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>;
                 })}
               </ul>
             );
           } else {
-            return <li>{el}</li>;
+            return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: el,
+                          }}
+                        ></li>;
           }
         })}
       </ul>
@@ -74,12 +98,20 @@ export default async function Cookie(
             return (
               <ul>
                 {el.map((SubEl) => {
-                  return <li>{SubEl}</li>;
+                  return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>;
                 })}
               </ul>
             );
           } else {
-            return <li>{el}</li>;
+            return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: el,
+                          }}
+                        ></li>;
           }
         })}
       </ul>
@@ -92,12 +124,20 @@ export default async function Cookie(
             return (
               <ul>
                 {el.map((SubEl) => {
-                  return <li>{SubEl}</li>;
+                  return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>;
                 })}
               </ul>
             );
           } else {
-            return <li>{el}</li>;
+            return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: el,
+                          }}
+                        ></li>;
           }
         })}
       </ul>
@@ -106,7 +146,11 @@ export default async function Cookie(
       </h2>
       <ul className="Cookie_six_chapter_desc">
         {Cookie.six_chapter_desc.map((el) => {
-          return <li>{el}</li>;
+          return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: el,
+                          }}
+                        ></li>;
         })}
       </ul>
     </div>

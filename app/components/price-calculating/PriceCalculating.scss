@@ -4,7 +4,9 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 50px;
-
+@media (max-width:1200px) {
+  margin-top: 30px;
+}
   .span-title {
     display: table;
     margin: 0 auto;

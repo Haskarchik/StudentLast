@@ -52,15 +52,7 @@ export default function CustomAutocomplete({
               variant="standard"
             />
           )}
-          sx={{
-            
-            "& .MuiAutocomplete-listbox": {
-              backgroundColor: "pink !important", // Зміна кольору заливки попапу на рожевий
-            },
-            "& .MuiAutocomplete-popper": {
-              backgroundColor: "pink !important", // Зміна кольору опцій на рожевий
-            },
-          }}
+         
         />
       )}
     />

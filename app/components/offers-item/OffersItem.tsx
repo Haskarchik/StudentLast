@@ -30,7 +30,7 @@ const OffersItem: FC<Props> = ({ id, price, time, workName, lang, OffersData }) 
           </div>
           <div className="price-div">
             <span>{`${OffersData.from} ${
-              lang === "ua" ? price : Math.floor(price / 30)
+            price
             }${OffersData.currency}`}</span>
             <span className="time-span">
               <Image src="/review-photos/clock.svg" alt="clock" width={30} height={30}/>

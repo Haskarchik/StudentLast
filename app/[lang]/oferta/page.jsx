@@ -19,12 +19,20 @@ export default async function Oferta(
             return (
               <ul>
                 {el.map((SubEl) => {
-                  return <li>{SubEl}</li>;
+                  return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>;
                 })}
               </ul>
             );
           } else {
-            return <li>{el}</li>;
+            return <li
+                          dangerouslySetInnerHTML={{
+                            __html: el,
+                          }}
+                        ></li>;
           }
         })}
       </ul>
@@ -37,12 +45,20 @@ export default async function Oferta(
             return (
               <ul>
                 {el.map((SubEl) => {
-                  return <li>{SubEl}</li>;
+                  return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>;
                 })}
               </ul>
             );
           } else {
-            return <li>{el}</li>;
+            return <li
+                          dangerouslySetInnerHTML={{
+                            __html: el,
+                          }}
+                        ></li>;
           }
         })}
       </ul>
@@ -55,12 +71,20 @@ export default async function Oferta(
             return (
               <ul>
                 {el.map((SubEl) => {
-                  return <li>{SubEl}</li>;
+                  return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>;
                 })}
               </ul>
             );
           } else {
-            return <li>{el}</li>;
+            return <li
+                          dangerouslySetInnerHTML={{
+                            __html: el,
+                          }}
+                        ></li>;
           }
         })}
       </ul>
@@ -71,12 +95,20 @@ export default async function Oferta(
             return (
               <ul>
                 {el.map((SubEl) => {
-                  return <li>{SubEl}</li>;
+                  return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>;
                 })}
               </ul>
             );
           } else {
-            return <li>{el}</li>;
+            return <li
+                          dangerouslySetInnerHTML={{
+                            __html: el,
+                          }}
+                        ></li>;
           }
         })}
       </ul>
@@ -87,12 +119,20 @@ export default async function Oferta(
             return (
               <ul>
                 {el.map((SubEl) => {
-                  return <li>{SubEl}</li>;
+                  return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>;
                 })}
               </ul>
             );
           } else {
-            return <li>{el}</li>;
+            return <li
+                          dangerouslySetInnerHTML={{
+                            __html: el,
+                          }}
+                        ></li>;
           }
         })}
       </ul>
@@ -103,12 +143,20 @@ export default async function Oferta(
             return (
               <ul>
                 {el.map((SubEl) => {
-                  return <li>{SubEl}</li>;
+                  return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>;
                 })}
               </ul>
             );
           } else {
-            return <li>{el}</li>;
+            return <li
+                          dangerouslySetInnerHTML={{
+                            __html: el,
+                          }}
+                        ></li>;
           }
         })}
       </ul>
@@ -121,12 +169,20 @@ export default async function Oferta(
             return (
               <ul>
                 {el.map((SubEl) => {
-                  return <li>{SubEl}</li>;
+                  return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>;
                 })}
               </ul>
             );
           } else {
-            return <li>{el}</li>;
+            return <li
+                          dangerouslySetInnerHTML={{
+                            __html: el,
+                          }}
+                        ></li>;
           }
         })}
       </ul>
@@ -139,12 +195,20 @@ export default async function Oferta(
             return (
               <ul>
                 {el.map((SubEl) => {
-                  return <li>{SubEl}</li>;
+                  return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>;
                 })}
               </ul>
             );
           } else {
-            return <li>{el}</li>;
+            return <li
+                          dangerouslySetInnerHTML={{
+                            __html: el,
+                          }}
+                        ></li>;
           }
         })}
       </ul>
@@ -155,12 +219,20 @@ export default async function Oferta(
             return (
               <ul>
                 {el.map((SubEl) => {
-                  return <li>{SubEl}</li>;
+                  return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>;
                 })}
               </ul>
             );
           } else {
-            return <li>{el}</li>;
+            return <li
+                          dangerouslySetInnerHTML={{
+                            __html: el,
+                          }}
+                        ></li>;
           }
         })}
       </ul>
@@ -171,12 +243,20 @@ export default async function Oferta(
             return (
               <ul>
                 {el.map((SubEl) => {
-                  return <li>{SubEl}</li>;
+                  return  <li
+                          dangerouslySetInnerHTML={{
+                            __html: SubEl,
+                          }}
+                        ></li>;
                 })}
               </ul>
             );
           } else {
-            return <li>{el}</li>;
+            return <li
+                          dangerouslySetInnerHTML={{
+                            __html: el,
+                          }}
+                        ></li>;
           }
         })}
       </ul>

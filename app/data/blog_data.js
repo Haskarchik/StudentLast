@@ -407,7 +407,7 @@ export const initialArticles = [
     ],
   },
   /* ---------------------------------- */
-  {
+ /*  {
     id: "article_9",
     title: "aaaaaaabbbb",
     subTitle:
@@ -471,5 +471,5 @@ export const initialArticles = [
       "",
       "",
     ],
-  },
+  }, */
 ];

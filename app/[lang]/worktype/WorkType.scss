@@ -20,6 +20,11 @@
   @include lg {
     align-items: initial;
   }
+
+@media (max-width:1200px) {
+  
+  align-items: flex-start;
+}
 }
 
 .span-title {
@@ -54,8 +59,14 @@
   @include lg {
     justify-content: start;
   }
+  @media (max-width:1200px) {
+  margin-bottom: 0px;
+  margin-top: 0px;
+    
+  }
 }
 .work-description{
+  
   .work-description-desc {
     max-width: 480px;
     margin-bottom: 10px;

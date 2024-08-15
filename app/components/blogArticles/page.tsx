@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Article, useBlogContext } from "@/app/[lang]/blog/BlogContext";
 import { Locale } from "@/i18n.config";
 import Image from "next/image";
-import time from "@/public/img/Blog/Articles_img/Clock.png"
+import time from "@/public/img/Blog/Articles_img/Clock.png";
 
 const ArticleList = ({
   articles,
@@ -31,17 +31,14 @@ const ArticleList = ({
             <div className={styles.articleContent}>
               <h2>{article.title}</h2>
               <p>{article.subTitle}</p>
-              <div>
-                {article.views}
-                {lang == "ua" ? " Переглядів" : " Просмотров"}{" "}
+
+              <div className={styles.articleMeta}>
+                <div className={styles.views}>
+                  {article.views}
+                  {lang == "ua" ? " Переглядів" : " Просмотров"}
+                </div>
+                <div className={styles.date}>{article.date}</div>
               </div>
-            </div>
-            <div className={styles.articleMeta}>
-              <span className={styles.time}>
-                {<Image src={time} alt="time" width={20} height={20} />}
-                {article.time}
-              </span>
-              <span className={styles.date}>{article.date}</span>
             </div>
           </div>
         </Link>
