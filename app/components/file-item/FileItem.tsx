@@ -7,10 +7,8 @@ interface FileItemProps {
 }
 
 export default function FileItem({ file }: any) {
-  console.log(file[0]);
 
   function truncateString(str: string) {
-    console.log(str);
 
     const maxLength = 20;
     if (str.length <= maxLength) {
@@ -20,7 +18,7 @@ export default function FileItem({ file }: any) {
   }
   return (
     <div className="file-item">
-      {truncateString(file[0].name)}
+      {truncateString(file.name)}
       <DeleteFileButton file={file} />
     </div>
   );

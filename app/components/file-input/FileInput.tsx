@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { ChangeEvent, useEffect } from "react";
 import "./FileInput.scss";
 
@@ -6,16 +6,21 @@ import { FileContext } from "./FileContext";
 import FileList from "../file-list/FileList";
 import { BsFileEarmarkPost } from "react-icons/bs";
 
-
-const FileInput = ({ onChange,Home }: { onChange: (files: File[]) => void,Home:any }) => {
+const FileInput = ({
+  onChange,
+  Home,
+}: {
+  onChange: (files: File[]) => void;
+  Home: any;
+}) => {
   const [files, setFiles] = React.useState<File[]>([]);
 
-  console.log(files);
-  
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const fileUploaded:any = event.target.files;
+    const fileUploaded: any = event.target.files;
     if (fileUploaded) {
-      setFiles(prevArray => [...prevArray,fileUploaded]);
+      for (let index = 0; index < fileUploaded.length; index++) {
+        setFiles((prevArray) => [...prevArray, fileUploaded[index]]);
+      }
     }
   };
 
