@@ -22,14 +22,13 @@ const SetLanguage = ({ lang }) => {
   const [language, setLanguage] = useState(
     items.filter((element) => element.id !== selectedItem.id)
   );
-
+  const currentPath = window.location.pathname.slice(3);
+  const currentSearch = window.location.search;
   const handleItemClick = async (item) => {
     setIsOpen(false);
     setSelectedItem(item);
     setLanguage(items.filter((element) => element.id !== item.id));
-    lang = language
-    const currentPath = window.location.pathname.slice(3);
-    const currentSearch = window.location.search;
+    lang = language;
 
     try {
       await router.replace(`/${item.code}${currentPath}${currentSearch}`);
@@ -39,7 +38,7 @@ const SetLanguage = ({ lang }) => {
         console.error("i18n.changeLanguage is not available");
       }
     } catch (error) {
-      console.error('Error changing language:', error);
+      console.error("Error changing language:", error);
     }
 
     document.body.classList.toggle("overflow-hidden", !isOpen);
@@ -76,7 +75,7 @@ const SetLanguage = ({ lang }) => {
             borderRadius: "5px",
             borderStyle: "solid",
             borderWidth: "0.1px",
-           /*  borderColor: "white", */
+            /*  borderColor: "white", */
           }}
           width={40}
           height={24}
@@ -92,7 +91,8 @@ const SetLanguage = ({ lang }) => {
         }
       >
         {language.map((item) => (
-          <div
+          <a
+            href={`/${item.code}${currentPath}${currentSearch}`}
             key={item.id}
             className={styles.dropdown_item}
             onClick={() => handleItemClick(item)}
@@ -105,11 +105,11 @@ const SetLanguage = ({ lang }) => {
                 borderRadius: "5px",
                 borderStyle: "solid",
                 borderWidth: "1px",
-             /*    borderColor: "white", */
+                /*    borderColor: "white", */
               }}
               alt="flag country"
             />
-          </div>
+          </a>
         ))}
       </div>
       <div

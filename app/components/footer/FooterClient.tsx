@@ -13,16 +13,17 @@ const FooterClient = ({
   lang,
   Routes,
   Performer,
-  footer
+  footer,
 }: {
   lang: Locale;
   Routes: any;
   Performer: any;
-  footer:any
+  footer: any;
 }) => {
   const [currentLang, setCurrentLang] = useState<Locale>(lang);
   const router = useRouter();
-
+  const currentPath = window.location.pathname.slice(3);
+  const currentSearch = window.location.search;
   const switchLanguage = async (newLang: Locale) => {
     setCurrentLang(newLang);
 
@@ -50,7 +51,8 @@ const FooterClient = ({
           <Image width={400} height={100} src={logo} alt="logo" />
         </Link>
         <div className="language_switch">
-          <div
+          <a
+            href={`/ua${currentPath}${currentSearch}`}
             className={`ua ${currentLang === "ua" ? "" : "active"}`}
             onClick={() => (currentLang == "ua" ? "" : switchLanguage("ua"))}
             style={
@@ -59,9 +61,10 @@ const FooterClient = ({
                 : { cursor: "pointer" }
             }
           >
-               {footer.ua}
-          </div>
-          <div
+            {footer.ua}
+          </a>
+          <a
+           href={`/ru${currentPath}${currentSearch}`}
             className={`ru ${currentLang === "ru" ? "" : "active"}`}
             onClick={() => (currentLang == "ru" ? "" : switchLanguage("ru"))}
             style={
@@ -70,8 +73,8 @@ const FooterClient = ({
                 : { cursor: "pointer" }
             }
           >
-           {footer.ru}
-          </div>
+            {footer.ru}
+          </a>
         </div>
       </div>
       <div className="footer_navigatin">

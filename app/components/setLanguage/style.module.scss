@@ -83,7 +83,7 @@ $Dark-blue:#6B69E7;
     border-bottom-left-radius: 7px;
     border: 0px solid transparent;
 
-    a {
+  /*   a {
      
       &:first-child {
         background: $Dark-blue;
@@ -113,8 +113,9 @@ $Dark-blue:#6B69E7;
         opacity: 0;
      
       }
-    }
+    } */
     .dropdown_item {
+      display: block;
       padding: 10px;
       cursor: pointer;
       background: $Dark-blue;

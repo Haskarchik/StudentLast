@@ -6,6 +6,9 @@ import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import { BlogProvider } from "./blog/BlogContext";
 import React from "react";
+import CookieAlert from "../components/CookieAlert/page";
+import { cookies } from "next/headers";
+import { getDictionary } from "@/lib/dictionary";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +20,15 @@ export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
-const RootLayout = ({ children, params }: { children: React.ReactNode; params: { lang: Locale }; }) => {
+const RootLayout = async ({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: { lang: Locale };
+}) => {
   const language = params.lang === "ua" ? "uk" : "ru";
+  const { CookieAlertText } = await getDictionary(params.lang);
 
   return (
     <html lang={language}>
@@ -38,6 +48,7 @@ const RootLayout = ({ children, params }: { children: React.ReactNode; params: {
             <Footer lang={params.lang} />
           </footer>
         </div>
+        <CookieAlert info={CookieAlertText} />
       </body>
     </html>
   );
