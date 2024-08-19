@@ -11,7 +11,7 @@ interface BlogProps {
 export default function Article({ params: { lang } }: BlogProps) {
   return (
     <div className={styles.article__page}>
-      <ClientPage />
+      <ClientPage lang={lang}/>
       <SameArticles lang={lang} />
     </div>
   );

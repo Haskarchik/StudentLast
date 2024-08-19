@@ -5,11 +5,12 @@ import { Article, useBlogContext } from "../BlogContext";
 import style from "./style.module.scss";
 import Image from "next/image";
 import { isArray } from "util";
-export default function ClientPage() {
-  const { articles } = useBlogContext();
+import { Locale } from "@/i18n.config";
+export default function ClientPage({ lang }: { lang: Locale }) {
+  const { articles, setLang } = useBlogContext();
   const [activeArticle, setActiveArticle] = useState<Article | null>(null);
   const path = usePathname()?.slice(9);
-
+  setLang(lang);
   useEffect(() => {
     if (path) {
       const foundArticle = articles.find((el) => el.id === path);

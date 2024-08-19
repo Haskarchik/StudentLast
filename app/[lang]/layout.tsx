@@ -1,4 +1,3 @@
-import type { Metadata, ResolvingMetadata } from "next";
 import { Locale, i18n } from "@/i18n.config";
 import { Inter } from "next/font/google";
 import "../App.scss";
@@ -7,7 +6,6 @@ import Footer from "../components/footer/Footer";
 import { BlogProvider } from "./blog/BlogContext";
 import React from "react";
 import CookieAlert from "../components/CookieAlert/page";
-import { cookies } from "next/headers";
 import { getDictionary } from "@/lib/dictionary";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,6 +16,18 @@ type Props = {
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
+}
+
+export async function getServerSideProps({ params }: Props) {
+  const language = params.lang === "ua" ? "uk" : "ru";
+  const dictionary = await getDictionary(params.lang);
+
+  return {
+    props: {
+      language,
+      CookieAlertText: dictionary.CookieAlertText,
+    },
+  };
 }
 
 const RootLayout = async ({

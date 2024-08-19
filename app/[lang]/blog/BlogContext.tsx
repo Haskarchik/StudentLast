@@ -6,9 +6,11 @@ import React, {
   useCallback,
   useMemo,
   ReactNode,
+  useEffect,
 } from "react";
 
-import { initialArticles } from "../../data/blog_data";
+import { initialArticles, initialArticlesRu } from "../../data/blog_data";
+import { Locale } from "@/i18n.config";
 
 type SortBy = "date" | "name" | "views";
 
@@ -18,9 +20,9 @@ interface BlogContextProps {
   activeArticle: Article;
   activePage: number;
   setSortBy: (sortBy: SortBy) => void;
-  setactiveArticle: (article: Article) => void;
+  setActiveArticle: (article: Article) => void;
   setPage: (page: number) => void;
-  
+  setLang: (lang: Locale) => void;
   displayedArticles: () => Article[];
 }
 
@@ -48,20 +50,10 @@ export interface Article {
   chapter_6_text: (string | string[])[];
 }
 
-const BlogContext = createContext<BlogContextProps>({
-  articles: initialArticles,
-  activeArticle: initialArticles[0],
-  activePage: 0,
-  sortBy: "date",
-  setSortBy: () => {},
-  setactiveArticle: () => {},
-  setPage: () => {},
-  displayedArticles: () => [],
-});
+const BlogContext = createContext<BlogContextProps | undefined>(undefined);
 
 export const useBlogContext = () => {
   const context = useContext(BlogContext);
-
   if (!context) {
     throw new Error("useBlogContext must be used within a BlogProvider");
   }
@@ -73,24 +65,29 @@ interface BlogProviderProps {
 }
 
 export const BlogProvider = React.memo(({ children }: BlogProviderProps) => {
-  const [articles, setArticles] = useState<Article[]>(initialArticles);
+  const [lang, setLang] = useState<Locale>("ua");
   const [sortBy, setSortBy] = useState<SortBy>("date");
-  const [activeArticle, setactiveArticle] = useState<Article>(
-    initialArticles[0]
-  );
   const [activePage, setActivePage] = useState<number>(0);
+
+  const articles = useMemo(() => {
+    return lang === "ua" ? initialArticles : initialArticlesRu;
+  }, [lang]);
+
+  const activeArticle = useMemo(() => {
+    return articles[0];
+  }, [articles,lang]);
 
   const handleSortByChange = useCallback((sortBy: SortBy) => {
     setSortBy(sortBy);
     setActivePage(0); // Reset page on sort change
   }, []);
 
-  const handleSetactiveArticle = useCallback((article: Article) => {
-    setactiveArticle(article);
+  const handleSetActiveArticle = useCallback((article: Article) => {
+    // Update active article
   }, []);
 
   const handleSetPage = useCallback((page: number) => {
-    setActivePage(page-1);
+    setActivePage(page - 1);
   }, []);
 
   const sortedArticles = useMemo(() => {
@@ -125,9 +122,10 @@ export const BlogProvider = React.memo(({ children }: BlogProviderProps) => {
         activeArticle,
         activePage,
         setSortBy: handleSortByChange,
-        setactiveArticle: handleSetactiveArticle,
+        setActiveArticle: handleSetActiveArticle,
         setPage: handleSetPage,
         displayedArticles,
+        setLang,
       }}
     >
       {children}

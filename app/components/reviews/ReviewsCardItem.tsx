@@ -10,7 +10,7 @@ type Props = {
   stars: number;
 };
 const ReviewsCardItem: FC<Props> = ({ images, text, id, userName }) => {
-  const stars = Array.from({ length: 5 }, (_, index) => <Image src="/review-photos/star.svg" width={20} height={20} alt='star'/>);
+  const stars = Array.from({ length: 5 }, (_, index) => <Image src="/review-photos/star.svg" key={index} width={20} height={20} alt='star'/>);
   return (
     <div key={id} className="cardItem-wrapper">
       <Image className="cardItem-photo" width={100} height={100} src={images} alt="cardItem-photo" />

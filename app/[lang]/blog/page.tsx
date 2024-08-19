@@ -5,6 +5,7 @@ import styles from "./Blog.module.scss";
 import BlogPagination from "@/app/components/blogPagination/page";
 import { Locale } from "@/i18n.config";
 import { BlogProvider } from "./BlogContext";
+import { useEffect } from "react";
 
 interface BlogProps {
   params: {
@@ -13,7 +14,12 @@ interface BlogProps {
 }
 
 export default function Blog({ params: { lang } }: BlogProps) {
-  const { articles, sortBy, setSortBy, displayedArticles } = useBlogContext();
+  const { articles, sortBy, setSortBy, displayedArticles,setLang } = useBlogContext();
+  useEffect(() => {
+    setLang(lang);
+  }, [lang, setLang]);
+
+  
   return (
     <div className={styles.container}>
       <main>
