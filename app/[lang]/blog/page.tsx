@@ -14,12 +14,12 @@ interface BlogProps {
 }
 
 export default function Blog({ params: { lang } }: BlogProps) {
-  const { articles, sortBy, setSortBy, displayedArticles,setLang } = useBlogContext();
+  const { articles, sortBy, setSortBy, displayedArticles, setLang } =
+    useBlogContext();
   useEffect(() => {
     setLang(lang);
   }, [lang, setLang]);
 
-  
   return (
     <div className={styles.container}>
       <main>

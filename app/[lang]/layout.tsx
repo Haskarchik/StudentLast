@@ -18,17 +18,6 @@ export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
-export async function getServerSideProps({ params }: Props) {
-  const language = params.lang === "ua" ? "uk" : "ru";
-  const dictionary = await getDictionary(params.lang);
-
-  return {
-    props: {
-      language,
-      CookieAlertText: dictionary.CookieAlertText,
-    },
-  };
-}
 
 const RootLayout = async ({
   children,

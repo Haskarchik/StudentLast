@@ -87,3 +87,120 @@
 .articleMeta .date {
   font-size: 12px;
 }
+@media (max-width:900px) {
+  .articles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+  
+  .article {
+    display: flex;
+    background: transparent;
+    border-radius: 5px;
+    overflow: hidden;
+    max-height: 400px;
+    align-items: center;
+     flex-direction: column;     
+ 
+@media (max-width:400px) {
+  max-height: 450px;
+  
+}
+  }
+  
+  .article img {
+    border: 2px solid #806497;
+    border-radius: 10px;
+    width: 300px;
+    height: 160px;
+    object-fit: cover;
+    margin-right: 30px;
+    @media (max-width:420px) {
+    margin-right: 0px;
+      
+      width: 280px;
+      height: 130px;
+    }
+  }
+  
+  .articleContent {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media (max-width:420px) {
+    padding: 15px 0px;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      font-family: "Lora", sans-serif;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 122%;
+      letter-spacing: -0.01em;
+      color: #100f1b;
+    }
+    p {
+      @media (max-width:520px) {
+        text-align: justify;
+        word-break: break-all;
+      }
+      margin: 0 0 15px;
+      color: #000000;
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 140%;
+      letter-spacing: 0.01em;
+      color: #100f1b;
+
+    }
+    div {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      color: #000000;
+    }
+  }
+  
+  .articleMeta {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    font-family: "Lora", sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 122%;
+    letter-spacing: -0.01em;
+    color: #000000;
+    @media (max-width:400px) {
+      font-size: 16px;
+
+      
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      border: none;
+      margin-right: 5px;
+    }
+  }
+  .articleMeta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+  
+  .articleMeta .time,
+  .articleMeta .date {
+    font-size: 12px;
+  }
+  
+}

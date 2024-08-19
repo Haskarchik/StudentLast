@@ -13,9 +13,9 @@ const ArticleList = ({
   articles: Article[];
   lang: Locale;
 }) => {
-  const { activeArticle, setactiveArticle } = useBlogContext();
+  const { activeArticle, setActiveArticle } = useBlogContext();
   const handleArticleClick = (article: Article) => {
-    setactiveArticle(article);
+    setActiveArticle(article);
   };
 
   return (
