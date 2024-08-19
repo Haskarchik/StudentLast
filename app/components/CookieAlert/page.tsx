@@ -2,12 +2,13 @@
 import React, { useEffect, useState } from "react";
 import styles from "./style.module.scss";
 
-interface cookieAlert {
+interface CookieAlertProps {
   text: string;
   agreeBtn: string;
   moreBtn: string;
 }
-export default function CookieAlert({ info }: { info: cookieAlert }) {
+
+export default function CookieAlert({ info }: { info: CookieAlertProps }) {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -21,6 +22,10 @@ export default function CookieAlert({ info }: { info: cookieAlert }) {
 
   const handleAccept = () => {
     document.cookie = "visit=true; path=/; max-age=31536000";
+    setIsVisible(false);
+  };
+
+  const handleClose = () => {
     setIsVisible(false);
   };
 
@@ -42,6 +47,9 @@ export default function CookieAlert({ info }: { info: cookieAlert }) {
             >
               {info.moreBtn}
             </a>
+            <div className={styles.cookie_alert_closeBtn} onClick={handleClose}>
+              &#x2715; {/* Unicode для символу хрестика */}
+            </div>
           </div>
         </div>
       </div>
