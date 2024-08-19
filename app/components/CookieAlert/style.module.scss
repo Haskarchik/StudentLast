@@ -10,6 +10,12 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+    @media (max-width:1200px) {
+      flex-direction: column;
+      text-align: justify;
+      word-break: break-all;
+      font-size: 14px;
+    }
   }
 
   &_btns {
@@ -44,5 +50,9 @@
     top: 5px;
     right: 5px;
     cursor: pointer;
+    
+    @media (max-width:1200px) {
+      font-size: 20px;
+    }
   }
 }
