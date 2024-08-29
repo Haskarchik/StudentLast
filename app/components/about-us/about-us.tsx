@@ -3,6 +3,7 @@
 import { GetServerSideProps } from "next";
 import { Locale } from "@/i18n.config";
 import { getDictionary } from "@/lib/dictionary";
+
 import AboutUsComponent from "./AboutUsComponent";
 
 export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
@@ -14,6 +15,7 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
     },
   };
 };
+
 
 export default function AboutUsPage({
   article,
